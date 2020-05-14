@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap');
-
 html {
     margin: 0;
 }
@@ -23,10 +22,12 @@ nav ul {
     margin: 0;
     display: flex;
 }
+
 nav ul li {
     font-size: 30pt;
     background-color: #EBB;
 }
+
 
 /*
 nav ul li a {
@@ -42,13 +43,18 @@ nav ul li:first-child a {
 }
 */
 
-
 #content {
     margin-top: 30px;
 }
 
 #title {
     color: white;
-    font-size: 142pt;
+    font-size: 12rem;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    font-size: 3rem;
     text-align: center;
 }
