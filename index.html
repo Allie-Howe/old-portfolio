@@ -1,28 +1,70 @@
-<!DOCTYPE html>
-<html>
-
 <head>
-    <title>portfolio || home</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ah portfolio || home</title>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="./pages/aboutMe.html">about me</a></li>
-        </ul>
-    </nav>
+    <!-- Start of navbar - uses Bootstrap CSS -->
+    <nav class="navbar navbar-expand-lg sticky-top animated slideInDown">
+        <!-- Logo -->
+        <a class="navbar-brand" href="">ah!</a>
 
-    <div id="content">
-        <div id="header">
-            <div id="title">
-                welcome
-            </div>
-            <h2>this is a work in progress. if you couldn't tell.</h2>
-            <h2>see you soon!</h2>
+        <!-- Toggler for smaller devices -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Main navbar content -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="">home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="me.html">me</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        uni
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="projects/uni/all.html">all</a>
+                        <a class="dropdown-item" href="projects/uni/typ.html">third year project</a>
+                        <a class="dropdown-item" href="projects/uni/wally.html">where's wally</a>
+                        <a class="dropdown-item" href="projects/uni/ml1">machine learning: pt. I</a>
+                        <a class="dropdown-item" href="projects/uni/ml2">machine learning: pt. II</a>
+                    </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        non-uni
+                    </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="projects/non-uni/all.html">all</a>
+                            <a class="dropdown-item" href="projects/non-uni/polygonal pics.html">polygonal pictures</a>
+                            <a class="dropdown-item" href="projects/non-uni/firebaseOX.html">cloud tic-tac-toe</a>
+                        </div>
+                    </li>
+            </ul>
         </div>
+    </nav>
+    <!-- headings -->
+    <h1 class="intro fadein" id="i1">hi.</h1>
+    <h2 class="intro fadein" id="i2">this is a portfolio.</h2>
+    <h3 class="intro fadein" id="i3">please, take a look around.</h3>
+
+    <div class="main-content fadein">
+        <h2 class="heading">
+            first paragraph
+        </h2>
+        <p> lorem ipsum dolor sit amet, consectetur adipiscing elit. aliquam fermentum ex et metus consequat, vitae scelerisque ante maximus. pellentesque venenatis lobortis lobortis. maecenas ut condimentum eros. aliquam tincidunt placerat nisi, at bibendum
+            risus condimentum quis. duis eget magna et nunc vehicula fermentum. interdum et malesuada fames ac ante ipsum primis in faucibus. sed consequat non elit sit amet vulputate. interdum et malesuada fames ac ante ipsum primis in faucibus. integer
+            congue turpis hendrerit quam aliquet, sed eleifend est sollicitudin. praesent id enim sed justo tempus pharetra. etiam maximus tincidunt tincidunt. sed venenatis venenatis egestas. </p>
+
+        <img class="centered-pic" width=400 src="./assets/woman_gun_laptop.jpg">
+        <p class="caption"> woman aiming gun at laptop. what a perfect placeholder image this is. </p>
     </div>
 </body>
 
