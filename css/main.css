@@ -4,6 +4,7 @@ body {
     background-color: #FCC;
     margin: 0;
     margin-bottom: 40px;
+    color: white;
 }
 
 .navbar {
@@ -68,17 +69,15 @@ p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-#anim-speed-1 {
+.anim-speed-1 {
     animation-duration: 1.5s;
 }
 
-#anim-speed-2 {
-    font-size: 5rem;
+.anim-speed-2 {
     animation-duration: 3s;
 }
 
-#anim-speed-3 {
-    font-size: 3rem;
+.anim-speed-3 {
     animation-duration: 4.5s;
 }
 
