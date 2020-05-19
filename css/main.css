@@ -69,16 +69,20 @@ p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.anim-speed-1 {
+.as1 {
     animation-duration: 1.5s;
 }
 
-.anim-speed-2 {
+.as2 {
     animation-duration: 3s;
 }
 
-.anim-speed-3 {
+.as3 {
     animation-duration: 4.5s;
+}
+
+.as4 {
+    animation-duration: 5s;
 }
 
 .main-content {
@@ -87,7 +91,6 @@ p {
     border-width: 2px;
     border-radius: 20px;
     margin: 40px 10px 0 10px;
-    animation-duration: 5s;
 }
 
 .heading {
