@@ -1,7 +1,17 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
+
+    <style>
+        #intro-pic {
+            height: 30rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 
     <title>ah portfolio || me.</title>
 </head>
@@ -14,7 +24,8 @@
         <a class="navbar-brand" href="index.html">ah!</a>
 
         <!-- Toggler for smaller devices -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -25,10 +36,11 @@
                     <a class="nav-link" href="index.html">home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="aboutMe.html">me</a>
+                    <a class="nav-link active   " href="aboutMe.html">me</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         uni
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -38,40 +50,51 @@
                         <a class="dropdown-item" href="projects/uni/ML1.html">machine learning: pt. I</a>
                         <a class="dropdown-item" href="projects/uni/ML2.html">machine learning: pt. II</a>
                     </div>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         non-uni
                     </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="projects/all_non.html">all</a>
-                            <a class="dropdown-item" href="projects/non-uni/PolyPics.html">polygonal pictures</a>
-                            <a class="dropdown-item" href="projects/non-uni/fbO&X.html">cloud tic-tac-toe</a>
-                            <a class="dropdown-item" href="projects/non-uni/Summer2019.html">summer 2019 animations</a>
-                        </div>
-                    </li>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="projects/all_non.html">all</a>
+                        <a class="dropdown-item" href="projects/non-uni/PolyPics.html">polygonal pictures</a>
+                        <a class="dropdown-item" href="projects/non-uni/fbO&X.html">cloud tic-tac-toe</a>
+                        <a class="dropdown-item" href="projects/non-uni/Summer2019.html">summer 2019 animations</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
     <!-- headings -->
     <h1 class="intro fadein as1">hi.</h1>
     <h2 class="intro fadein as2">this is about me.</h2>
-    <h3 class="intro fadein as3"">it's selfish. i know.</h3>
+    <h3 class="intro fadein as3">
+        it's selfish. i know.
+    </h3>
 
     <div class="main-content fadein as4">
-        <h2 class="heading">
-            alex
-        </h2>
-        <p> lorem ipsum dolor sit amet, consectetur adipiscing elit. aliquam fermentum ex et metus consequat, vitae scelerisque ante maximus. pellentesque venenatis lobortis lobortis. maecenas ut condimentum eros. aliquam tincidunt placerat nisi, at bibendum
-            risus condimentum quis. duis eget magna et nunc vehicula fermentum. interdum et malesuada fames ac ante ipsum primis in faucibus. sed consequat non elit sit amet vulputate. interdum et malesuada fames ac ante ipsum primis in faucibus. integer
-            congue turpis hendrerit quam aliquet, sed eleifend est sollicitudin. praesent id enim sed justo tempus pharetra. etiam maximus tincidunt tincidunt. sed venenatis venenatis egestas. </p>
+        <h2 class="heading">alex howe.</h2>
+        <img id="intro-pic" src="assets/selfie_cropped.jpg" />
+        <p>Alex Howe is currently a third year Computer Science student at the University of Lincoln.
+            <b>[add section about how personal tutor/manager would describe me?]</b>
+            He is a motivated, hard-working and keen to learn student, who is trustworthy & responsible whilst having a
+            sense of humour. Also incredibly caring and mindful of others, with a reserved confidence that conveys
+            approachability.
+        </p>
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
     <script src="./script.js"></script>
 </body>
 
