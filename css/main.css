@@ -59,8 +59,11 @@ h3 {
   font-size: 3rem;
 }
 
+h5 {
+  padding-top: 0.3rem;
+}
+
 p {
-  margin: 0 1.5rem 0 1.5rem;
   color: #666;
   font-size: 1.3rem;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -85,7 +88,8 @@ p {
 .main-content {
   background-color: white;
   border-radius: 20px;
-  margin: 40px 10px 0 10px;
+  margin: 3rem 1rem 0 1rem;
+  padding: 0 1.5rem 0 1.5rem
 }
 
 .heading {
@@ -119,8 +123,7 @@ p {
   }
 }
 
-.navbar-toggler,
-.navbar-toggler-icon {
+.navbar-toggler{
   background-color: #FFF8;
 }
 
