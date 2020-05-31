@@ -33,8 +33,12 @@ body {
 
 a:hover {text-decoration: none;}
 
-a.nav-link {
+.navbar-dark .nav-item .nav-link {
   color: white;
+}
+
+.navbar-dark .nav-item .nav-link.active {
+  color: #FFF8;
 }
 
 .fadein {
@@ -123,10 +127,19 @@ p {
   }
 }
 
-.navbar-toggler{
-  background-color: #FFF8;
+/*
+.navbar-toggler-icon {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-
+*/
 .dropdown-item.active {
   background-color: #FFF4;
 } 
+
+.dropdown-item {
+  color: #FFFA;
+}
