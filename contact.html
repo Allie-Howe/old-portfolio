@@ -1,16 +1,34 @@
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
 
     <style>
-        #intro-pic {
-            height: 30rem;
+        .icons {
+            text-align: center;
+        }
+
+        .icon {
+            margin: 0 1rem 0 1rem;
+        }
+
+        .contactDiv {
+            text-align: center;
+        }
+
+        label {
+            color: #D99;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 1rem 0 0 0;
+        }
+
+        .sendForm {
+            background-color: #FCC;
+            border: none;
+            padding: 0.5rem 1.5rem 0.5rem 1.5rem;
         }
     </style>
 
@@ -22,7 +40,7 @@
     <nav class="navbar navbar-dark navbar-expand-lg sticky-top animated slideInDown">
 
         <!-- Logo -->
-        <a class="navbar-brand" href="index.html">ah!</a>
+        <a class="navbar-brand homeLink" href="./">ah!</a>
 
         <!-- Toggler for smaller devices -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -73,6 +91,32 @@
     <h2 class="intro fadein as1">want to talk?</h2>
     <h3 class="intro fadein as2">let's chat.</h3>
 
+    <div class="main-content as2">
+        <div class="icons">
+            <a href="https://twitter.com/howeoh"><img class="icon" src="./assets/images/twitter_icon.png" /></a>
+            <a href="https://linkedin.com/in/howeoh"><img class="icon" src="./assets/images/linkedin_icon.png" /></a>
+        </div>
+        <br />
+        <div class="contactDiv">
+            <h3 class="heading">give me an email:</h3>
+
+            <form class="input-form" action="./php/sendForm.php" method="POST">
+                <label for="name">name:</label>
+                <input id="name">
+
+                <label for="email">email:</label>
+                <input id="email">
+
+                <label for="subject">subject:</label>
+                <input id="subject">
+
+                <label for="msg">message:</label>
+                <textarea id="msg"></textarea>
+                <br />
+                <br />
+                <input class="sendForm" type="submit" value="send"> </form>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
         </script>

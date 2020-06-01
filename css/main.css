@@ -93,13 +93,12 @@ p {
   background-color: white;
   border-radius: 20px;
   margin: 3rem 1rem 0 1rem;
-  padding: 0 1.5rem 0 1.5rem
+  padding: 0.1rem 1.5rem 0.1rem 1.5rem;
 }
 
 .heading {
   text-align: center;
-  padding-top: 5px;
-  color: #666;
+  color: #D99;
   font-size: 2.3rem;
 }
 
