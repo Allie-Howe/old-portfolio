@@ -67,14 +67,51 @@
     <h2 class="heading">machine learning: part I</h2>
     <p>
       This piece of work is the first out of two assignments that comprised the Machine Learning module of my third
-      year. There were two sections, each focussing on different concepts in Machine Learning.
+      year. There were two sections, each focussing on different concepts in Machine Learning. The full PDF report can
+      be found <a href="../../assets/docs/ML1_Report.pdf">here</a>.
+      <br />
+      One of the main challenges that created more of a struggle was the prohibition of purpose-built Machine Learning
+      libraries such as SciKit Learn. This ensured that we created the algorithms essentially from the ground up.
     </p>
+    <br />
     <h5>Section 1: Polynomial Regression</h5>
-    <p>This portion of the assignment was related to Polynomial Regression. Our main task was to successfully &
-      accurately train a polynomial regression model using.....</p>
+    <p>
+      This portion of the assignment was related to Polynomial Regression. Our main task was to accurately create and
+      train a regression model, using Python, based on data from a CSV file. Since this task was the first that we were
+      set in this module, the dataset we were given was relatively small, in addition to the input being only one
+      dimensional.
+      <br />
+      <br />
+      The approach I took to training this model was to use Least Squares regression. This requires the creation of a
+      ‘Vandermonde matrix’, which was made a lot easier with the use of NumPy’s vander() function. After this the
+      weights could be calculated using the equation
+      <i>w=(X<sup>T</sup> X)<sup>-1</sup> X<sup>T</sup> y</i>,
+      then are ready to be used with non-training data.
+      <br />
+      <br />
+      The main advantage of using Polynomial over Linear Regression is that the resulting model can predict nonlinear
+      patterns in data. By changing the ‘degree’, it is possible to predict results based on square, cubic or higher
+      order polynomials.
+    </p>
+    <br />
     <h5>Section 2: K-Means</h5>
-    <p>This is a paragraph describing the K-Means assignment</p>
-    <p>The full PDF report can be found <a href="../../assets/docs/ML1_Report.pdf">here</a>.</p>
+    <p>
+      The second task in this piece of coursework was to create a K-Means algorithm to cluster data into appropriate
+      segments. This dataset contained four separate features related to measurements of dogs, such as tail length and
+      height.
+      <br />
+      <br />
+      K-Means is an unsupervised classification Machine Learning algorithm, meaning it does not require separating the
+      data into training and testing sets, but rather the entire dataset is used. Classification models take a feature
+      vector and generally return a single number, signifying which class, or cluster, the feature belongs to. These
+      classes are normally then labelled manually, for example ‘Chihuahua’ or ‘Golden Retriever’.
+      <br />
+      <br />
+      K-Means is an iterative algorithm which creates random co-ordinates to ‘centroids’, assigns each datapoint to the
+      centroid it’s closest to and calculates the mean of all points for each centroid. This average result is then the
+      new position of each centroid, and this process is repeated until the centroids are ‘stable’, and their position
+      does not change. The final clusters are determined by which centroid each point is closest to, as before.
+    </p>
   </div>
 
 
