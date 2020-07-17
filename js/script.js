@@ -1,5 +1,5 @@
 const appendIfLocal = () => {
-  //If locally hosted, append relevant text to links to ensure functionality
+  //Guard Clause - If not locally hosted, don't run
   if (window.location.protocol != "file:") return;
 
   //append "index" to home links
@@ -14,5 +14,6 @@ const appendIfLocal = () => {
 };
 
 window.onload = () => {
+  //append relevant text to links to ensure functionality
   appendIfLocal();
 };
