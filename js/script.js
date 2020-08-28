@@ -1,7 +1,4 @@
-const appendIfLocal = () => {
-  //Guard Clause - If not locally hosted, don't run
-  if (window.location.protocol != "file:") return;
-
+const appendToLinks = () => {
   //append "index" to home links
   home = document.querySelectorAll(".homeLink");
   for (var i = 0; i < home.length; i++) home[i].href += "index";
@@ -14,6 +11,7 @@ const appendIfLocal = () => {
 };
 
 window.onload = () => {
+  console.log(window.location);
   //append relevant text to links to ensure functionality
-  appendIfLocal();
+  if (window.location.protocol == "file:") appendToLinks();
 };
