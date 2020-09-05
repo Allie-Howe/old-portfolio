@@ -13,7 +13,7 @@ span {
     width: 50px;
     height: 200%;
     animation: bg-anim 5s ease-in-out infinite;
-    background: linear-gradient(#111 0%, #111 50%, yellow 50%, yellow 100%, #111 100%);
+    background: linear-gradient(#111 50%, yellow 50%);
     background-size: 20% 20%;
     position: fixed;
     top: 0;
