@@ -11,7 +11,10 @@ const appendToLinks = () => {
 };
 
 window.onload = () => {
-  console.log(window.location);
   //append relevant text to links to ensure functionality
-  if (window.location.protocol == "file:") appendToLinks();
+  if (
+    window.location.protocol == "file:" ||
+    window.location.hostname == "127.0.0.1"
+  )
+    appendToLinks();
 };
