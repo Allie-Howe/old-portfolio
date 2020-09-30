@@ -1,0 +1,180 @@
+/* == IMPORT FONTS == */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&display=swap');
+
+
+/* == ROOT & BODY == */
+:root {
+    --bg-grad: linear-gradient(50deg, #C14953, #FB6107, #F3DE2C, #7CB518, #58B09C, #8A1C7C)
+}
+
+body {
+    margin: 0;
+    color: white;
+    background-color: #111;
+    font-family: "Montserrat";
+}
+
+/* == WELCOME HEADER == */
+header {
+    background-color: #C14953;
+    background: var(--bg-grad);
+    background-size: 1000% 1000%;
+    animation: bg-anim 30s linear infinite alternate;
+
+    width: 100%;
+    margin-bottom: 40px;
+
+    font-family: "Playfair Display";
+    font-weight: 100;
+
+    display: flex;
+    justify-content: center;
+    
+    box-shadow: 0 5px 20px #FFF4;
+}
+
+.welcome {
+    font-size: 175px;
+    text-shadow: 5px 5px 5px #0008;
+    font-weight: 100;
+    animation: appear-anim 1.75s;
+}
+
+/* == NAV == */
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+    text-align: center;
+    margin: 0 20px;
+}
+
+nav a {
+    color: #FFF9;
+    text-decoration: none;
+
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+nav img {
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+nav.scrolled {
+    background-color: #000D;
+    box-shadow: 0 0 10px #FFF4;
+}
+
+nav a:hover, nav a:focus {
+    color: #0009;
+    outline: none;
+}
+
+nav.scrolled a:hover, nav.scrolled a:focus {
+    color: #FFF;
+}
+
+/* == START OF MAIN CONTENT == */
+.container {
+    margin: 0 15%;
+
+    color: #CCC;
+}
+
+h2 {
+    text-align: center;
+    
+    font-size: 50px;
+    font-weight: 300;
+}
+
+p {
+    font-family: "Roboto Slab";
+    
+    font-size: 24px;
+    font-weight: 300;
+}
+
+#ss {
+    display: block;
+    float: right;
+    
+    max-height:700px;
+    width: auto;
+    height: auto;
+
+    transition: 0.75s;
+    opacity: 0;
+}
+
+#ss.in-view {
+    opacity: 1;
+}
+
+/* == FOOTER == */
+footer {
+    text-align: center;
+    margin: 0;
+    background-color: #161616;
+}
+
+/* == ANIMATIONS == */
+@keyframes bg-anim {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+@keyframes appear-anim {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ==MOBILE ADJUSTMENTS (mobile first? no) == */
+@media screen and (max-width: 800px) {
+    .brand {
+        max-width: 50px;
+    }
+
+    .welcome {
+        font-size: 125px;
+    }
+
+    nav a {
+        font-size: 22px;
+    }
+
+    .container {
+        margin: 0;
+        padding: 0 5%;
+    }
+
+    #ss {
+        max-height: 250px;
+    }
+}
