@@ -17,7 +17,8 @@
     rgb(255, 255, 250)
   );
   --link-clr: rgb(255, 173, 173);
-  --hv-clr: var(--link-clr);
+  --hv-clr: #fff;
+  --text-clr: #fff;
 }
 
 body {
@@ -30,7 +31,6 @@ body {
 /* == NAVBAR == */
 nav {
   --link-clr: #000a;
-  --link-hv-clr: var(--link-clr);
   --hv-clr: var(--link-clr);
   position: fixed;
   z-index: 1;
@@ -55,29 +55,25 @@ nav a {
   transition: 0.5s;
 }
 nav a:hover, nav a:focus {
-  color: var(--link-hv-clr);
   outline: none;
 }
 nav .brand {
   margin: 0 auto 0 10px;
-  color: #000a;
+  color: #000c;
   font-size: 70px;
   font-weight: 400;
 }
 nav.scrolled {
   background-color: #000d;
   box-shadow: 0 0 10px #fff4;
-  --link-clr: #fff9;
-  --link-hv-clr: #eee;
+  --link-clr: #bbb;
+  --hv-clr: #eee;
 }
 nav.scrolled .brand {
-  color: var(--link-hv-clr);
+  color: var(--text-clr);
 }
 nav.scrolled a {
   color: var(--link-clr);
-}
-nav.scrolled a:hover, nav.scrolled a:focus {
-  color: var(--link-hv-clr);
 }
 
 /* == HEADER == */
@@ -89,8 +85,6 @@ header {
   width: 100%;
   margin-bottom: 40px;
   padding: 60px 0;
-  font-family: "Playfair Display";
-  font-weight: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,8 +101,9 @@ header img {
 }
 header .welcome {
   margin: 0;
+  font-family: "Roboto Slab";
   font-size: 175px;
-  font-weight: 100;
+  font-weight: 200;
   color: #000a;
 }
 header .icons {
@@ -180,6 +175,25 @@ footer {
   background-color: #161616;
 }
 
+/* ==PSEUDOCLASSES== */
+a:not(.icon) {
+  position: relative;
+}
+a:not(.icon)::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 5%;
+  width: 100%;
+  background-color: var(--hv-clr);
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+a:not(.icon):hover::after {
+  transform: scaleX(1);
+}
+
 /* == ANIMATIONS == */
 @keyframes bg-anim {
   0% {
@@ -219,27 +233,16 @@ footer {
     padding: 0 5%;
   }
 
+  .icons a.icon {
+    margin: 10%;
+  }
+  .icons a.icon img {
+    width: 50px;
+  }
+
   #ss {
     max-height: 250px;
   }
-}
-/* ==PSEUDOCLASSES== */
-a:not(.icon) {
-  position: relative;
-}
-a:not(.icon)::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  height: 5%;
-  width: 100%;
-  background-color: var(--hv-clr);
-  transform: scaleX(0);
-  transition: transform 0.25s;
-}
-a:not(.icon):hover::after {
-  transform: scaleX(1);
 }
 
 /*# sourceMappingURL=style.css.map */
