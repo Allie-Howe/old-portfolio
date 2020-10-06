@@ -25,7 +25,7 @@
 body {
   margin: 0;
   color: white;
-  background-color: #111;
+  background-color: #111 !important;
   font-family: "Montserrat";
 }
 
@@ -43,25 +43,17 @@ nav {
   justify-content: center;
   transition: background-color 0.25s;
 
-  ul {
-    list-style-type: none;
-  }
+  background-color: #fff3;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 2px 10px #fffa;
+  // border-bottom: white 2px solid;
+
   li {
-    display: inline;
-    text-align: center;
     margin: 0 20px;
   }
   a {
     color: var(--link-clr);
-    text-decoration: none;
-
     font-size: 30px;
-    transition: 0.5s;
-
-    &:hover,
-    &:focus {
-      outline: none;
-    }
   }
   .brand {
     margin: 0 auto 0 10px;
@@ -72,8 +64,8 @@ nav {
   }
 
   &.scrolled {
-    background-color: #000d;
-    box-shadow: 0 0 10px #fff4;
+    background-color: #000a;
+    // box-shadow: 0 0 10px #fff4;
 
     --link-clr: #bbb;
     --hv-clr: #eee;
@@ -89,7 +81,7 @@ nav {
 }
 
 /* == HEADER == */
-header {
+#header {
   background-color: #c14953;
   background: var(--bg-grad);
   background-size: 500% 500%;
@@ -138,7 +130,7 @@ header {
 }
 
 /* == CONTENT == */
-.container {
+.textbox {
   margin: 0 15%;
   color: #ccc;
   overflow: auto;
@@ -252,7 +244,7 @@ a:not(.icon) {
 /* ==MOBILE ADJUSTMENTS (mobile first? no) == */
 @media screen and (max-width: 800px) {
   nav {
-    background-color: #0004;
+    background-color: #fff8;
   }
 
   .brand {
@@ -282,5 +274,6 @@ a:not(.icon) {
 
   #ss {
     max-height: 250px;
+    animation: none;
   }
 }

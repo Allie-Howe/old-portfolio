@@ -8,34 +8,75 @@
     <title>alex howe || portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
 <body>
     <span id="top"></span>
-    <nav>
+    <!-- <nav>
         <h3 class="brand">ah!</h3>
-        <!-- <img class="brand" alt="brand logo" src="https://img.icons8.com/color/96/000000/rgb-circle-1--v1.png" /> -->
         <ul>
+            <button></button>
             <li><a href="#1">info</a></li>
             <li><a href="#2">portfolio</a></li>
             <li><a href="#2">contact</a></li>
         </ul>
+    </nav> -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <h2 class="navbar-brand" href="#">ah!</h2>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">contact</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <header>
+
+    <header id="header">
         <h1 class="welcome">hey.</h1>
         <div class="icons">
-            <a class="icon" target="_blank" rel="noopener noreferrer"
-                href="https://www.twitter.com/ScaredComputers"><img src="assets/svg/tw.svg" /></a>
-            <a class="icon" href="mailto:alex.g.howe63@gmail.com"><img src="assets/svg/mail.svg" /></a>
-            <a class="icon" target="_blank" rel="noopener noreferrer" href="https://www.github.com/howe-oh"><img
-                    src="assets/svg/gh.svg" /></a>
-            <a class="icon" target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/howeoh"><img
-                    src="assets/svg/li.svg" /></a>
+            <a class="icon" target="_blank" rel="noopener noreferrer" href="https://www.twitter.com/ScaredComputers">
+                <img alt="Twitter Icon" src="assets/svg/tw.svg" />
+            </a>
+            <a class="icon" href="mailto:alex.g.howe63@gmail.com">
+                <img alt="Email Icon" src="assets/svg/mail.svg" />
+            </a>
+            <a class="icon" target="_blank" rel="noopener noreferrer" href="https://www.github.com/howe-oh">
+                <img alt="Github Icon" src="assets/svg/gh.svg" />
+            </a>
+            <a class="icon" target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/howeoh">
+                <img src="assets/svg/li.svg" />
+            </a>
         </div>
     </header>
 
-    <section id="section1" class="container">
+    <section id="about" class="textbox">
         <h2>who am i?</h2>
 
         <!-- <img id="ss" src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios9-iphone6-camera-home-screen.png" /> -->
@@ -53,7 +94,7 @@
 
     <span></span>
 
-    <section class="container">
+    <section id="portfolio" class="textbox">
         <h2>what have i done?</h2>
         <p>Oh god, what have I done? These are just a few of the projects I've worked on over the years.</p>
     </section>
