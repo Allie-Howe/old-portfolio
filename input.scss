@@ -79,6 +79,10 @@ nav {
       color: var(--link-clr);
     }
   }
+
+  .navbar-collapse.show {
+    background-color: #fffa !important;
+  }
 }
 
 /* == HEADER == */
