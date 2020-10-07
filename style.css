@@ -35,13 +35,14 @@ nav {
   position: fixed;
   z-index: 1;
   width: 100%;
+  padding: -1px 10px 0 20px !important;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.25s;
-  background-color: #fff3;
-  backdrop-filter: blur(3px);
-  box-shadow: 0 2px 10px #fffa;
+  background-color: #fff6;
+  box-shadow: 0 2px 10px #fff6;
+  backdrop-filter: blur(10px);
 }
 nav li {
   margin: 0 20px;
@@ -50,19 +51,18 @@ nav a {
   color: var(--link-clr);
   font-size: 30px;
 }
-nav .brand {
-  margin: 0 auto 0 10px;
-  color: #000c;
-  font-size: 70px;
+nav .navbar-brand {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
   font-weight: 400;
+  color: #000c;
 }
 nav.scrolled {
   background-color: #000a;
+  box-shadow: 0 0 10px #fff4;
   --link-clr: #bbb;
   --hv-clr: #eee;
-}
-nav.scrolled .brand {
-  color: var(--text-clr);
 }
 nav.scrolled a {
   color: var(--link-clr);
@@ -104,7 +104,7 @@ nav.scrolled a {
   justify-content: center;
 }
 #header .icons > .icon {
-  margin: 0 40px;
+  margin: 0 7%;
 }
 
 /* == CONTENT == */
@@ -150,8 +150,6 @@ nav.scrolled a {
   padding-left: 20px;
   float: right;
   max-height: 400px;
-  width: auto;
-  height: auto;
   opacity: 0;
   transition: transform 1s, opacity 1.5s;
 }
@@ -182,7 +180,7 @@ a:not(.icon)::after {
   transform: scaleX(0);
   transition: transform 0.25s;
 }
-a:not(.icon):hover::after {
+a:not(.icon):hover::after, a:not(.icon):focus::after {
   transform: scaleX(1);
 }
 

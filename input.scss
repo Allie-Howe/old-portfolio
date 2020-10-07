@@ -35,44 +35,45 @@ nav {
   --hv-clr: var(--link-clr);
 
   position: fixed;
-
   z-index: 1;
+
   width: 100%;
+  padding: -1px 10px 0 20px !important;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   transition: background-color 0.25s;
 
-  background-color: #fff3;
-  backdrop-filter: blur(3px);
-  box-shadow: 0 2px 10px #fffa;
-  // border-bottom: white 2px solid;
+  background-color: #fff6;
+  box-shadow: 0 2px 10px #fff6;
+  backdrop-filter: blur(10px);
 
   li {
     margin: 0 20px;
   }
+
   a {
     color: var(--link-clr);
     font-size: 30px;
   }
-  .brand {
-    margin: 0 auto 0 10px;
 
-    color: #000c;
-    font-size: 70px;
+  .navbar-brand {
+    margin: 0;
+    padding: 0;
+
+    font-size: 50px;
     font-weight: 400;
+    color: #000c;
   }
 
   &.scrolled {
     background-color: #000a;
-    // box-shadow: 0 0 10px #fff4;
+    box-shadow: 0 0 10px #fff4;
 
     --link-clr: #bbb;
     --hv-clr: #eee;
-
-    .brand {
-      color: var(--text-clr);
-    }
 
     a {
       color: var(--link-clr);
@@ -124,7 +125,7 @@ nav {
     justify-content: center;
 
     > .icon {
-      margin: 0 40px;
+      margin: 0 7%;
     }
   }
 }
@@ -179,8 +180,6 @@ nav {
     float: right;
 
     max-height: 400px;
-    width: auto;
-    height: auto;
 
     opacity: 0;
     transition: transform 1s, opacity 1.5s;
@@ -214,7 +213,8 @@ a:not(.icon) {
     transform: scaleX(0);
     transition: transform 0.25s;
   }
-  &:hover::after {
+  &:hover::after,
+  &:focus::after {
     transform: scaleX(1);
   }
 }
