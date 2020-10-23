@@ -208,6 +208,17 @@ nav {
   }
 }
 
+.card {
+  padding: 0;
+  margin: 0 20px;
+  --link-clr: white;
+
+  color: #666;
+  .btn {
+    margin: 10px;
+  }
+}
+
 /* == FOOTER == */
 footer {
   text-align: center;
