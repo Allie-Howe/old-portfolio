@@ -42,7 +42,7 @@ nav {
   transition: background-color 0.25s;
   background-color: #fff6;
   box-shadow: 0 2px 10px #fff6;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(6px);
 }
 nav li {
   margin: 0 20px;
@@ -58,17 +58,29 @@ nav .navbar-brand {
   font-weight: 400;
   color: #000c;
 }
+nav .navbar-toggler {
+  background-color: #fffa !important;
+}
 nav.scrolled {
   background-color: #000a;
   box-shadow: 0 0 10px #fff4;
   --link-clr: #bbb;
   --hv-clr: #eee;
 }
+nav.scrolled .navbar-brand,
+nav.scrolled .nav-link {
+  color: var(--link-clr) !important;
+}
 nav.scrolled a {
   color: var(--link-clr);
 }
-nav .navbar-collapse.show {
-  background-color: #fffa !important;
+@supports not (backdrop-filter: blur(1px)) {
+  nav {
+    background-color: #fffe;
+  }
+  nav.scrolled {
+    background-color: #000d;
+  }
 }
 
 /* == HEADER == */
@@ -237,9 +249,17 @@ a:not(.icon):hover::after, a:not(.icon):focus::after {
     width: 50px;
   }
 
-  #ss {
-    max-height: 250px;
+  #selfie {
+    height: 250px;
     animation: none;
+  }
+
+  .navbar-collapse.show {
+    background-color: #fff8 !important;
+  }
+
+  .scrolled .navbar-collapse.show {
+    background-color: #000a !important;
   }
 }
 
