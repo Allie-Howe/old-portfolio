@@ -256,6 +256,18 @@ footer {
     max-width: 50px;
   }
 
+  #about {
+    #selfie {
+      float: none;
+      transform: translateX(0);
+      margin: auto;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
   .welcome {
     font-size: 125px;
   }
