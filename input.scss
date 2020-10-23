@@ -185,7 +185,7 @@ nav {
 
 .card {
   padding: 0;
-  border: 0 !important;
+  // border: 2px #888 solid !important;
   margin: 0 20px;
   --link-clr: white;
   color: #666;
@@ -225,6 +225,12 @@ footer {
   &:hover::after,
   &:focus::after {
     transform: scaleX(1);
+  }
+}
+
+.card:hover {
+  .btn {
+    background-color: #faa !important;
   }
 }
 
@@ -301,11 +307,5 @@ footer {
     .navbar-collapse.show {
       background-color: #000a !important;
     }
-  }
-}
-
-.card:hover {
-  .btn {
-    background-color: #faa !important;
   }
 }

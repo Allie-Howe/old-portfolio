@@ -154,7 +154,6 @@ nav.scrolled a {
 
 .card {
   padding: 0;
-  border: 0 !important;
   margin: 0 20px;
   --link-clr: white;
   color: #666;
@@ -194,6 +193,10 @@ footer {
 .link:hover::after,
 .link:focus::after {
   transform: scaleX(1);
+}
+
+.card:hover .btn {
+  background-color: #faa !important;
 }
 
 /* == ANIMATIONS == */
@@ -263,9 +266,6 @@ footer {
   .scrolled .navbar-collapse.show {
     background-color: #000a !important;
   }
-}
-.card:hover .btn {
-  background-color: #faa !important;
 }
 
 /*# sourceMappingURL=style.css.map */
