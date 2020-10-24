@@ -19,12 +19,13 @@ window.onload = () => {
   );
 
   const topObs = new IntersectionObserver((entries) => {
-    if (img.classList.contains("in-view")) return;
+    // if (img.classList.contains("in-view")) return;
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
         img.classList.add("in-view");
+        nav.classList.add("light");
       } else {
-        img.classList.remove("in-view");
+        nav.classList.remove("light");
       }
     });
   });

@@ -31,31 +31,24 @@ body {
 
 /* == NAVBAR == */
 nav {
-  --link-clr: #000a;
-  --hv-clr: var(--link-clr);
-
-  position: fixed;
-  z-index: 1;
-
-  width: 100%;
-  padding: -1px 10px 0 20px !important;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
 
+  padding: -1px 10px 0 20px !important;
   transition: background-color 0.25s;
+  z-index: 1;
 
-  background-color: #fff6;
-  box-shadow: 0 2px 10px #fff6;
-  backdrop-filter: blur(6px);
+  --link-clr: #000a;
+  --hv-clr: var(--link-clr);
+  color: var(--link-clr);
 
   li {
     margin: 0 20px;
   }
 
   a {
-    color: var(--link-clr);
     font-size: 30px;
   }
 
@@ -65,11 +58,12 @@ nav {
 
     font-size: 50px;
     font-weight: 400;
-    color: #000c;
   }
 
-  .navbar-toggler {
-    background-color: #fffa !important;
+  &.light {
+    backdrop-filter: blur(6px);
+    background-color: #fff6;
+    box-shadow: 0 2px 10px #fff6;
   }
 
   &.scrolled {
@@ -80,17 +74,16 @@ nav {
     --hv-clr: #eee;
 
     .navbar-brand,
-    .nav-link {
-      color: var(--link-clr) !important;
-    }
-
+    .nav-link,
     a {
-      color: var(--link-clr);
+      color: var(--link-clr) !important;
     }
   }
 
   @supports not (backdrop-filter: blur(1px)) {
-    background-color: #fffe;
+    &.light {
+      background-color: #fffe;
+    }
 
     &.scrolled {
       background-color: #000d;

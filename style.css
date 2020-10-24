@@ -30,25 +30,21 @@ body {
 
 /* == NAVBAR == */
 nav {
-  --link-clr: #000a;
-  --hv-clr: var(--link-clr);
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  padding: -1px 10px 0 20px !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  padding: -1px 10px 0 20px !important;
   transition: background-color 0.25s;
-  background-color: #fff6;
-  box-shadow: 0 2px 10px #fff6;
-  backdrop-filter: blur(6px);
+  z-index: 1;
+  --link-clr: #000a;
+  --hv-clr: var(--link-clr);
+  color: var(--link-clr);
 }
 nav li {
   margin: 0 20px;
 }
 nav a {
-  color: var(--link-clr);
   font-size: 30px;
 }
 nav .navbar-brand {
@@ -56,10 +52,11 @@ nav .navbar-brand {
   padding: 0;
   font-size: 50px;
   font-weight: 400;
-  color: #000c;
 }
-nav .navbar-toggler {
-  background-color: #fffa !important;
+nav.light {
+  backdrop-filter: blur(6px);
+  background-color: #fff6;
+  box-shadow: 0 2px 10px #fff6;
 }
 nav.scrolled {
   background-color: #000a;
@@ -68,14 +65,12 @@ nav.scrolled {
   --hv-clr: #eee;
 }
 nav.scrolled .navbar-brand,
-nav.scrolled .nav-link {
+nav.scrolled .nav-link,
+nav.scrolled a {
   color: var(--link-clr) !important;
 }
-nav.scrolled a {
-  color: var(--link-clr);
-}
 @supports not (backdrop-filter: blur(1px)) {
-  nav {
+  nav.light {
     background-color: #fffe;
   }
   nav.scrolled {
