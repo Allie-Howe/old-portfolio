@@ -189,10 +189,21 @@ nav {
   margin: 0 20px;
   --link-clr: white;
   color: #666;
+  overflow: hidden;
   .btn {
     margin: 10px;
     border: 0 !important;
-    // transition: 0.5s;
+  }
+  .card-img-top {
+    transition: transform 0.5s;
+    transform-origin: top;
+  }
+}
+
+.card:hover,
+.card:focus {
+  .card-img-top {
+    transform: scale(1.3);
   }
 }
 

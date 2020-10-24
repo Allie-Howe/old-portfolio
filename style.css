@@ -158,10 +158,20 @@ nav.scrolled a {
   margin: 0 20px;
   --link-clr: white;
   color: #666;
+  overflow: hidden;
 }
 .card .btn {
   margin: 10px;
   border: 0 !important;
+}
+.card .card-img-top {
+  transition: transform 0.5s;
+  transform-origin: top;
+}
+
+.card:hover .card-img-top,
+.card:focus .card-img-top {
+  transform: scale(1.3);
 }
 
 /* == FOOTER == */
