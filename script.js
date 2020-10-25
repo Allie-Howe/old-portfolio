@@ -19,7 +19,6 @@ window.onload = () => {
   );
 
   const topObs = new IntersectionObserver((entries) => {
-    // if (img.classList.contains("in-view")) return;
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
         img.classList.add("in-view");
