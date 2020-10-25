@@ -1,4 +1,6 @@
 window.onload = () => {
+  scrollEventListener();
+
   const header = document.querySelector("header"),
     nav = document.querySelector("nav"),
     top = document.querySelector("#top"),
@@ -32,3 +34,17 @@ window.onload = () => {
   headingObs.observe(header);
   topObs.observe(top);
 };
+
+function scrollEventListener() {
+  console.log("calledAgain");
+
+  console.log($("html, body").animate());
+
+  $(".nav-link").click(function (event) {
+    event.preventDefault();
+    $("html, body").animate(
+      { scrollTop: $($(this).attr("href")).offset().top },
+      500
+    );
+  });
+}
