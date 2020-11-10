@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.gifs {
+    display: flex;
+}
+
+.checkers {
+    width: 50vw;
+    height: 50vh;
+
+    object-fit: cover;
+    transition: transform .5s;
+}
+
+.checkers:hover{
+    z-index: 9999;
+    transform: scale(1.25);
+}
