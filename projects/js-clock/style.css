@@ -1,0 +1,97 @@
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    text-align: center;
+
+    display: flex;
+    flex: 1;
+    align-items: center;
+
+    height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+
+    border-radius: 50%;
+    border: 20px solid white;
+
+    background-color: #FFF4;
+
+    box-shadow: 2px 2px 5px #0004, inset 2px 2px 5px #0004;
+
+    margin: 50px auto;
+    padding: 1rem;
+
+    position: relative;
+}
+
+.clock-face {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transform: rotate(90deg);
+}
+
+.hand {
+    position: absolute;
+    background: black;
+
+    width: 50%;
+    height: 3px;
+    top: 50%;
+
+    transform-origin: right;
+    transition: 0.2s;
+}
+
+.s-hand {
+    background: red;
+    transform: scaleY(.75);
+}
+
+.m-hand {
+    transform: scaleX(.9);
+}
+
+.h-hand {
+    transform: scaleX(.7) scaleY(1.25);
+}
+
+.marker {
+    position: absolute;
+    
+    width: 5%;
+    height: 5%;
+    
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #0004, inset 1px 1px 5px #0004;
+}
+
+.twelve {
+    top: 0;
+    left: 47.5%;
+}
+
+.three {
+    right: 0;
+    top: 47.5%;
+}
+
+.six {
+    bottom: 0;
+    left: 47.5%;
+}
+
+.nine {
+    left: 0;
+    top: 47.5%;
+}
