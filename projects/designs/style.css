@@ -7,15 +7,15 @@ body {
     display: flex;
 }
 
-.checkers {
-    width: 50vw;
-    height: 50vh;
+.gif {
+    /* width: 50vw;
+    height: 50vh; */
 
     object-fit: cover;
     transition: transform .5s;
 }
 
-.checkers:hover{
+.gif:hover{
     z-index: 9999;
     transform: scale(1.25);
 }
