@@ -36,10 +36,6 @@ window.onload = () => {
 };
 
 function scrollEventListener() {
-  console.log("calledAgain");
-
-  console.log($("html, body").animate());
-
   $(".nav-link").click(function (event) {
     event.preventDefault();
     $("html, body").animate(
