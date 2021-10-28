@@ -176,6 +176,61 @@ nav {
   }
 }
 
+/* == SKILLS == */
+.tabs {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+
+  .category {
+    flex-grow: 1;
+    transition: opacity 0.3s;
+    // padding: 2.5%;
+    padding: 2.5%;
+    background-color: #333;
+    text-align: center;
+
+    &:first-child {
+      border-radius: 20px 0 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 20px 0 0;
+    }
+
+    &.active {
+      opacity: 0.75;
+    }
+  }
+}
+
+.skill-page {
+  display: none;
+  &.active {
+    display: revert;
+    background-color: rgba(51, 51, 51, 0.75);
+    border-radius: 0 0 20px 20px;
+  }
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+
+    .col {
+      list-style-type: none;
+      text-align: center;
+      li {
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
+.link {
+  text-decoration: none !important;
+  color: var(--link-clr);
+}
+
+/* == PORTFOLIO CARDS == */
 .card {
   padding: 0;
   border: 0 !important;
@@ -191,12 +246,11 @@ nav {
     transition: transform 0.5s;
     transform-origin: top;
   }
-}
-
-.card:hover,
-.card:focus {
-  .card-img-top {
-    transform: scale(1.3);
+  &:hover,
+  &:focus {
+    .card-img-top {
+      transform: scale(1.3);
+    }
   }
 }
 
@@ -216,10 +270,8 @@ a.anchor {
 
 /* ==PSEUDOCLASSES== */
 .nav-link,
-.link {
+.fancy-link {
   position: relative;
-  color: var(--link-clr);
-  text-decoration: none !important;
 
   &::after {
     position: absolute;

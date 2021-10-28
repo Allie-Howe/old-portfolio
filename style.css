@@ -147,6 +147,55 @@ nav.scrolled a {
   transform: translateX(-10px);
 }
 
+/* == SKILLS == */
+.tabs {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.tabs .category {
+  flex-grow: 1;
+  transition: opacity 0.3s;
+  padding: 2.5%;
+  background-color: #333;
+  text-align: center;
+}
+.tabs .category:first-child {
+  border-radius: 20px 0 0 0;
+}
+.tabs .category:last-child {
+  border-radius: 0 20px 0 0;
+}
+.tabs .category.active {
+  opacity: 0.75;
+}
+
+.skill-page {
+  display: none;
+}
+.skill-page.active {
+  display: revert;
+  background-color: rgba(51, 51, 51, 0.75);
+  border-radius: 0 0 20px 20px;
+}
+.skill-page .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.skill-page .row .col {
+  list-style-type: none;
+  text-align: center;
+}
+.skill-page .row .col li {
+  padding: 10px 0;
+}
+
+.link {
+  text-decoration: none !important;
+  color: var(--link-clr);
+}
+
+/* == PORTFOLIO CARDS == */
 .card {
   padding: 0;
   border: 0 !important;
@@ -163,9 +212,7 @@ nav.scrolled a {
   transition: transform 0.5s;
   transform-origin: top;
 }
-
-.card:hover .card-img-top,
-.card:focus .card-img-top {
+.card:hover .card-img-top, .card:focus .card-img-top {
   transform: scale(1.3);
 }
 
@@ -185,13 +232,11 @@ a.anchor {
 
 /* ==PSEUDOCLASSES== */
 .nav-link,
-.link {
+.fancy-link {
   position: relative;
-  color: var(--link-clr);
-  text-decoration: none !important;
 }
 .nav-link::after,
-.link::after {
+.fancy-link::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -203,8 +248,8 @@ a.anchor {
   transition: transform 0.25s;
 }
 .nav-link:hover::after, .nav-link:focus::after,
-.link:hover::after,
-.link:focus::after {
+.fancy-link:hover::after,
+.fancy-link:focus::after {
   transform: scaleX(1);
 }
 
