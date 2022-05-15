@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clone of Chris Shier's "Line"</title>
 </head>
 
 <body>
@@ -19,22 +20,26 @@
         var variables = {
             colourShift: 9,
             smoothing: false,
-            changeOnClick: false
+            changeOnClick: false,
+            lineLength: 64,
+            width: 12
         }
         var hue;
+        const rnd = Math.random() * 360 + 1;
+
         function linee(width) {
             ctx.lineCap = "round";
             ctx.lineJoin = "miter";
             ctx.lineWidth = width || 2;
             ctx.beginPath();
-            for (var i = 64; i > 0; i--) {
+            for (var i = variables.lineLength; i > 0; i--) {
                 ctx.moveTo(Mouse.xA[i - 1], Mouse.yA[i - 1]);
                 ctx.lineTo(Mouse.xA[i], Mouse.yA[i]);
                 var a = (Mouse.xA[i] - Mouse.xA[i - 1]) || 1;
                 var b = (Mouse.yA[i] - Mouse.yA[i - 1]) || 1;
-                hue = (-time / variables.colourShift) + (i * 2) + (hypotenuse(a, b) * 6) + aRandomNumber;
+                hue = (-time / variables.colourShift) + (i * 2) + (Math.hypot(a, b) * 3) + rnd;
                 ctx.strokeStyle = hsla(hue, 100, 50, 1);
-                ctx.lineWidth = Math.max(width - (hypotenuse(a, b) / 2), 2);
+                ctx.lineWidth = Math.max(width - (Math.hypot(a, b) / 4), 2);
                 ctx.stroke();
                 ctx.beginPath();
             }
@@ -61,27 +66,16 @@
             }
 
             if (Mouse.x !== -1 && Mouse.y !== -1) {
-                linee(12);
+                linee(variables.width);
             }
         }
         animloop();
     </script>
     <script>
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-3889624-4']);
-        _gaq.push(['_trackPageview']);
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-    <script>
         let gui = new dat.GUI();
         gui.add(variables, "colourShift", 0, 9);
+        gui.add(variables, "lineLength", 0, 64);
+        gui.add(variables, "width", 0, 64);
         gui.add(variables, "smoothing", true, false);
         gui.add(variables, "changeOnClick", true, false);
     </script>

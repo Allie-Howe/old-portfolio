@@ -42,16 +42,10 @@ function hsla(h, s, l, a) {
   return `hsla(${hue}, ${sat}%, ${light}%, ${alpha})`;
 }
 
-function hypotenuse(a, b) {
-  return Math.sqrt((a * a) + (b * b || a * a)) / 2;
-};
-
 function clearCanvas(a) {
   ctx.fillStyle = hsla(0, 0, 0, a);
   ctx.fillRect(0, 0, cw, ch);
 }
-
-var aRandomNumber = Math.random() * 360 + 1;
 
 function decay(hor,ver, spread, rotate){
     var h = hor,

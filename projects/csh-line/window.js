@@ -6,7 +6,7 @@ function getWindowSize() {
   var w = window,
     d = document,
     e = d.documentElement,
-    g = d.getElementsByTagName('body')[0];
+    g = d.querySelector('body');
 
   cw = w.innerWidth || e.clientWidth || g.clientWidth;
   ch = w.innerHeight || e.clientHeight || g.clientHeight;
