@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone of Chris Shier's "Line"</title>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <script src="dat.gui.min.js"></script>
+    <script src="window.js"></script>
+    <script src="mouse.js"></script>
+    <script src="canvas.js"></script>
+    <script>
+        var variables = {
+            colourShift: 9,
+            smoothing: false,
+            changeOnClick: false,
+            lineLength: 64,
+            width: 12
+        }
+        var hue;
+        const rnd = Math.random() * 360 + 1;
+
+        function linee(width) {
+            ctx.lineCap = "round";
+            ctx.lineJoin = "miter";
+            ctx.lineWidth = width || 2;
+            ctx.beginPath();
+            for (var i = variables.lineLength; i > 0; i--) {
+                ctx.moveTo(Mouse.xA[i - 1], Mouse.yA[i - 1]);
+                ctx.lineTo(Mouse.xA[i], Mouse.yA[i]);
+                var a = (Mouse.xA[i] - Mouse.xA[i - 1]) || 1;
+                var b = (Mouse.yA[i] - Mouse.yA[i - 1]) || 1;
+                hue = (-time / variables.colourShift) + (i * 2) + (Math.hypot(a, b) * 3) + rnd;
+                ctx.strokeStyle = hsla(hue, 100, 50, 1);
+                ctx.lineWidth = Math.max(width - (Math.hypot(a, b) / 4), 2);
+                ctx.stroke();
+                ctx.beginPath();
+            }
+        }
+
+        function animloop() {
+            window.requestAnimFrame(animloop);
+            imageSmoothing(variables.smoothing);
+            timer();
+
+            if (Mouse.clicks % 2 == 1) {
+                decay(0, 0, 2, 0);
+                decay(0, 0, -8, Math.PI + Mouse.clicks)
+            } else {
+                decay(0, 0, 2, 0);
+                decay(0, 0, -32, Math.PI + Mouse.clicks + 1)
+            }
+
+            if ((Mouse.x <= 20 && Mouse.y <= 20)  /*top left*/ ||
+                (Mouse.x >= cw - 20 && Mouse.y <= 20)  /*top right*/ ||
+                (Mouse.x >= cw - 20 && Mouse.y >= ch - 20)  /*bottom right*/ ||
+                (Mouse.x <= 20 && Mouse.y >= ch - 20)  /* bottom left*/) {
+                clearCanvas(0.1);
+            }
+
+            if (Mouse.x !== -1 && Mouse.y !== -1) {
+                linee(variables.width);
+            }
+        }
+        animloop();
+    </script>
+    <script>
+        let gui = new dat.GUI();
+        gui.add(variables, "colourShift", 0, 9);
+        gui.add(variables, "lineLength", 0, 64);
+        gui.add(variables, "width", 0, 64);
+        gui.add(variables, "smoothing", true, false);
+        gui.add(variables, "changeOnClick", true, false);
+    </script>
+</body>
+
+</html>
