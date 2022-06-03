@@ -3,16 +3,21 @@
 const h = 5
 const w = h;
 const squareSize = Math.min(window.innerHeight, window.innerWidth)/10
+const IS_MOBILE = window.innerWidth < 600 ? true : false;
+let STARTING_SCALE = IS_MOBILE ? .25 : 1;
+let SCALE = STARTING_SCALE;
 let clrs;
 let cubeImg;
 let gui, guiVars = {
-  cubeSpacing: 0
+  cubeSpacing: 0,
+  amplitude: 50
 }
 
 function preload() {
   cubeImg = loadImage("./cube.png")
   gui = new dat.GUI()
   gui.add(guiVars, "cubeSpacing", 0, 100)
+  gui.add(guiVars, "amplitude", 0, 100)
 }
 
 function setup() {
@@ -31,6 +36,8 @@ function setup() {
 function draw() {
   background(clrs.bg);
   translate(width/2, height/2);
+  scale(SCALE);
+  oldY = window.mouseY;
 
   drawGrid()
 }
@@ -46,7 +53,8 @@ function drawGrid() {
 }
 
 function doGridItem(i, j, offset) {
-  const displacement = sin(((millis()/500) * (i+j))) * 50
+  // normalise displacement to amount of cubes
+  const displacement = sin(((millis()/500) * (i+j))) * guiVars.amplitude
   push();
   const [geoX, geoY] = getGeoFromIso([j, i])
   translate(geoX, geoY);
@@ -64,4 +72,12 @@ function getGeoFromIso([isoX, isoY]) {
   const ix = i().map(v => v * isoX);
   const jy = j().map(v => v * isoY);
   return adjustGeoToCubeWidth(ix, jy);
+}
+
+let oldY
+function mouseDragged() {
+  const diff = oldY - window.mouseY;
+  oldY = window.mouseY;
+  if (SCALE <= STARTING_SCALE && diff < 0) return
+  SCALE+=(diff/100)
 }
