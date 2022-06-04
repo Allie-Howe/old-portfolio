@@ -10,7 +10,8 @@ let clrs;
 let cubeImg;
 let gui, guiVars = {
   cubeSpacing: 0,
-  amplitude: 50
+  amplitude: 50,
+  hoverMode: false
 }
 
 function preload() {
@@ -18,6 +19,7 @@ function preload() {
   gui = new dat.GUI()
   gui.add(guiVars, "cubeSpacing", 0, 100)
   gui.add(guiVars, "amplitude", 0, 100)
+  gui.add(guiVars, "hoverMode")
 }
 
 function setup() {
@@ -62,8 +64,9 @@ function doGridItem(i, j, offset) {
   push();
   const [geoX, geoY] = getGeoFromIso([j, i]);
   translate(geoX, geoY);
-  if (-i === mousePos[1] && -j === mousePos[0])
-  translate(0, -10);
+  if (guiVars.hoverMode) {
+    if (-i === mousePos[1] && -j === mousePos[0]) translate(0, -10);
+  } else translate(0, displacement);
   image(cubeImg, 0, 0);
   pop();
 }
