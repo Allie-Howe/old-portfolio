@@ -15,11 +15,6 @@ let gui, guiVars = {
 
 function preload() {
   cubeImg = loadImage("./cube.png")
-  gui = new dat.GUI()
-  gui.add(guiVars, "cubeSpacing", 0, 100)
-  gui.add(guiVars, "amplitude", 0, 100)
-  gui.add(guiVars, "speed", 0, 5)
-  gui.add(guiVars, "hoverMode")
 }
 
 function setup() {
