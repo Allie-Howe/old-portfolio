@@ -13,3 +13,7 @@ function mouseMoved() {
   const YPos = height/2 - mouseY;
   mousePos = getIsoFromGeo([XPos, YPos]).map(floor);
 }
+
+function mousePressed() {
+  console.log("AA")
+}
