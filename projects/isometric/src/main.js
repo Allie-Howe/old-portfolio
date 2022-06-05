@@ -1,0 +1,47 @@
+const h = 5
+const w = h;
+const squareSize = Math.min(window.innerHeight, window.innerWidth)/10
+const IS_MOBILE = window.innerWidth < 600 ? true : false;
+const STARTING_SCALE = IS_MOBILE ? .25 : 1;
+let SCALE = STARTING_SCALE;
+let clrs;
+let cubeImg;
+let gui, guiVars = {
+  cubeSpacing: 0,
+  amplitude: 50,
+  speed: 2,
+  hoverMode: true
+}
+
+function preload() {
+  cubeImg = loadImage("./cube.png")
+  gui = new dat.GUI()
+  gui.add(guiVars, "cubeSpacing", 0, 100)
+  gui.add(guiVars, "amplitude", 0, 100)
+  gui.add(guiVars, "speed", 0, 5)
+  gui.add(guiVars, "hoverMode")
+}
+
+function setup() {
+  createCanvas(window.innerWidth, window.innerHeight);
+  imageMode(CENTER)
+
+  clrs = {
+    bg: color(0),
+    fg: color(255,255,255)
+  }
+  adjustedH = cubeImg.height + guiVars.cubeSpacing
+  adjustedW = cubeImg.width + guiVars.cubeSpacing
+
+  background(clrs.bg);
+  fill(clrs.fg);
+}
+
+function draw() {
+  background(clrs.bg);
+  translate(width/2, height/2);
+  scale(SCALE);
+  oldY = window.mouseY;
+
+  drawGrid();
+}
