@@ -18,11 +18,12 @@ function doGridItem(i, j) {
 
 function drawCube(i, j) {
   let drawnCube = cubeImg;
-  // TODO: Make function for nicely dealing with co-ord comparison
-  if (-i === mousePos[1] && -j === mousePos[0]) {
-    drawnCube = cubeSelected
-    if (mouseIsPressed) drawnCube = cubeCorrect
+  const cubePos = [-j, -i]
+
+  if (checkIfMatching(cubePos, mousePos)) {
+    drawnCube = mouseIsPressed ? cubeClicked : cubeSelected
   }
-  if (-i === rndTile[1] && -j === rndTile[0]) drawnCube = cubeTarget
+  if (checkIfMatching(cubePos, rndTile)) drawnCube = cubeTarget
+
   image(drawnCube, 0, 0);
 }

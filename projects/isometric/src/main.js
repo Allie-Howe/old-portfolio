@@ -1,13 +1,14 @@
 const h = 5
 const w = h;
 const GRID_START = {i: -Math.floor(h/2), j: -Math.floor(w/2)}
+let rndTile = getRndPos();
 
 const squareSize = Math.min(window.innerHeight, window.innerWidth)/10
 const IS_MOBILE = window.innerWidth < 600 ? true : false;
 const STARTING_SCALE = IS_MOBILE ? .25 : 1;
 let SCALE = STARTING_SCALE;
 let clrs;
-let cubeImg, cubeCorrect, cubeIncorrect, cubeTarget, cubeSelected;
+let cubeImg, cubeCorrect, cubeIncorrect, cubeTarget, cubeSelected, cubeClicked;
 let gui, guiVars = {
   cubeSpacing: 0,
   amplitude: 50,
