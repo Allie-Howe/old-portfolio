@@ -5,7 +5,7 @@ const IS_MOBILE = window.innerWidth < 600 ? true : false;
 const STARTING_SCALE = IS_MOBILE ? .25 : 1;
 let SCALE = STARTING_SCALE;
 let clrs;
-let cubeImg;
+let cubeImg, cubeCorrect, cubeIncorrect, cubeTarget, cubeSelected;
 let gui, guiVars = {
   cubeSpacing: 0,
   amplitude: 50,
@@ -15,6 +15,10 @@ let gui, guiVars = {
 
 function preload() {
   cubeImg = loadImage("./assets/cube.png")
+  cubeTarget = loadImage("./assets/cube_target.png")
+  cubeCorrect = loadImage("./assets/cube_correct.png")
+  cubeIncorrect = loadImage("./assets/cube_incorrect.png")
+  cubeSelected = loadImage("./assets/cube_selected.png")
 }
 
 function setup() {

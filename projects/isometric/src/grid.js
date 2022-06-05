@@ -12,6 +12,12 @@ function doGridItem(i, j) {
   const [geoX, geoY] = getGeoFromIso([j, i]);
   translate(geoX, geoY);
   applyDisplacement(i, j);
-  image(cubeImg, 0, 0);
+  drawCube(i, j)
   pop();
+}
+
+function drawCube(i, j) {
+  let drawnCube = cubeImg;
+  if (-i === mousePos[1] && -j === mousePos[0]) drawnCube = cubeSelected
+  image(drawnCube, 0, 0);
 }
