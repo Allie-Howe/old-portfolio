@@ -14,7 +14,7 @@ let gui, guiVars = {
 }
 
 function preload() {
-  cubeImg = loadImage("./cube.png")
+  cubeImg = loadImage("./assets/cube.png")
 }
 
 function setup() {
