@@ -1,5 +1,7 @@
 const h = 5
 const w = h;
+const GRID_START = {i: -Math.floor(h/2), j: -Math.floor(w/2)}
+
 const squareSize = Math.min(window.innerHeight, window.innerWidth)/10
 const IS_MOBILE = window.innerWidth < 600 ? true : false;
 const STARTING_SCALE = IS_MOBILE ? .25 : 1;
