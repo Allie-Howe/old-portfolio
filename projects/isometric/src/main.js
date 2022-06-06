@@ -42,7 +42,7 @@ function setup() {
 function draw() {
   background(clrs.bg);
   translate(width/2, height/2);
-  scale(SCALE);
+  // scale(SCALE);
   oldY = window.mouseY;
 
   drawGrid();
