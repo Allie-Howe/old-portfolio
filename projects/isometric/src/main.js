@@ -25,8 +25,7 @@ function preload() {
 }
 
 function setup() {
-  const smallestLength = Math.min(window.innerHeight, window.innerWidth)
-  createCanvas(smallestLength, smallestLength);
+  createCanvas(window.innerWidth, window.innerHeight);
   imageMode(CENTER)
 
   clrs = {
@@ -43,7 +42,7 @@ function setup() {
 function draw() {
   background(clrs.bg);
   translate(width/2, height/2);
-  // scale(SCALE);
+  scale(SCALE);
   oldY = window.mouseY;
 
   drawGrid();
