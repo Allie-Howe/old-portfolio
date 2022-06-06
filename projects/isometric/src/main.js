@@ -25,7 +25,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
+  const smallestLength = Math.min(window.innerHeight, window.innerWidth)
+  createCanvas(smallestLength, smallestLength);
   imageMode(CENTER)
 
   clrs = {
