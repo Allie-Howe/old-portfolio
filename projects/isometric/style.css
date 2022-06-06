@@ -3,3 +3,7 @@ body {
   overflow: hidden;
   background-color: black;
 }
+
+canvas {
+  scale: 0.25;
+}
