@@ -7,7 +7,7 @@ function mouseMoved() {
   mousePos = getIsoFromGeo([XPos, YPos]).map(floor);
 }
 
-const checkIfMatching = (mousePos, rndTile) => (mousePos.every((v, index) => v !== rndTile[index] ? false : true))
+const checkIfMatching = (mousePos, rndTile) => (mousePos.length && mousePos.every((v, index) => v !== rndTile[index] ? false : true))
 
 function rnd(min, max) {
   return Math.random() * Math.abs(max-min) + min
