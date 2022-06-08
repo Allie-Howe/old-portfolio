@@ -30,6 +30,8 @@ function preload() {
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   imageMode(CENTER)
+  updateScore()
+
 
   clrs = {
     bg: color(0),

@@ -32,7 +32,9 @@ function mousePressed() {
 }
 
 function updateScore() {
-  document.querySelector("#score").innerHTML = Math.round((clickedCounts.correct/clickedCounts.total)*10000)/100
+  const accuracy = clickedCounts.total ? Math.round((clickedCounts.correct/clickedCounts.total)*100) : 0;
+
+  document.querySelector("#score").innerHTML = accuracy;
 }
 
 function mouseReleased() {

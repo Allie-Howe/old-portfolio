@@ -10,5 +10,13 @@ canvas {
 
 .score {
   color: white;
+  text-align: center;
+  font-size: 40pt;
+  font-family: sans-serif;
+
   z-index: 9999;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  right: 0;
 }
