@@ -21,13 +21,19 @@ function getRndPos() {
 
 function mousePressed() {
   DISP_HEIGHT = -5
+  clickedCounts.total++
 
   if (checkIfMatching(mousePos, rndTile)) {
+    clickedCounts.correct++
     rndTile = getRndPos()
     cubeClicked = cubeCorrect
   } else cubeClicked = cubeIncorrect
+  updateScore()
 }
 
+function updateScore() {
+  document.querySelector("#score").innerHTML = Math.round((clickedCounts.correct/clickedCounts.total)*10000)/100
+}
 
 function mouseReleased() {
   DISP_HEIGHT = -10

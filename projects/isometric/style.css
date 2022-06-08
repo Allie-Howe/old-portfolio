@@ -7,3 +7,8 @@ body {
 canvas {
   scale: 0.25;
 }
+
+.score {
+  color: white;
+  z-index: 9999;
+}
