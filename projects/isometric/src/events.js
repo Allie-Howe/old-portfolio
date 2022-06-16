@@ -20,6 +20,11 @@ function getRndPos() {
 ].map(Math.round)}
 
 function mousePressed() {
+  if (!timeGameStarted) {
+    timeGameStarted = millis()
+    document.querySelector("#scoreArea").classList = "visible";
+  };
+
   DISP_HEIGHT = -5
   clickedCounts.total++
 
@@ -34,7 +39,7 @@ function mousePressed() {
 function updateScore() {
   const accuracy = clickedCounts.total ? Math.round((clickedCounts.correct/clickedCounts.total)*100) : 0;
 
-  document.querySelector("#score").innerHTML = accuracy;
+  document.querySelector("#accuracy").innerHTML = accuracy;
 }
 
 function mouseReleased() {

@@ -8,15 +8,23 @@ canvas {
   scale: 0.25;
 }
 
-.score {
+#scoreArea {
   color: white;
-  text-align: center;
   font-size: 40pt;
   font-family: sans-serif;
+  display: none;
 
   z-index: 9999;
   position: absolute;
   margin: 0;
+  padding: .5em;
   left: 0;
-  right: 0;
+}
+
+#scoreArea.visible {
+  display: unset;
+}
+
+p {
+  margin: .5em;
 }

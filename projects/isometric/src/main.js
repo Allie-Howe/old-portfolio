@@ -8,7 +8,7 @@ let rndTile = getRndPos();
 
 let clickedCounts = {correct: null, total: null};
 const squareSize = Math.min(window.innerHeight, window.innerWidth)/10
-
+let timeGameStarted = 0;
 let clrs;
 let cubeImg, cubeCorrect, cubeIncorrect, cubeTarget, cubeSelected, cubeClicked;
 
@@ -48,7 +48,7 @@ function draw() {
   background(clrs.bg);
   translate(width/2, height/2);
   scale(SCALE);
-  oldY = window.mouseY;
+  document.querySelector("#timer").innerHTML = round((millis() - timeGameStarted) / 1000)
 
   drawGrid();
 }
