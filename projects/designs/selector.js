@@ -11,11 +11,12 @@ const paths = [
 let pathIndex = 0;
 
 const changePath = () => document.querySelector("#gifArea").src = paths[pathIndex];
-
+const handleClick = () => {
+  pathIndex = (pathIndex + 1) % paths.length;
+  changePath();
+  document.querySelector("#info").style.opacity = "0";
+}
 window.onload = () => {
   changePath();
-  document.querySelector("#gifArea").onclick = () => {
-    pathIndex = (pathIndex + 1) % paths.length;
-    changePath();
-  }
+  document.onclick = handleClick;
 }
