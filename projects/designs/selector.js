@@ -7,11 +7,12 @@ const paths = [
   `${PATH}/snake.gif`,
   `${PATH}/triangles.gif`,
   `${PATH}/Plus Squares.gif`,
-  // `${PATH}/recursive_squares.mp4`,
 ]
-let pathIndex = 0;
+const images = paths.map((path) => {const img = new Image();img.src = path;return img})
 
-const changePath = () => document.querySelector("#gifArea").src = paths[pathIndex];
+let pathIndex = Math.round(Math.random() * paths.length);
+
+const changePath = () => document.querySelector("#gifArea").replaceChildren(images[pathIndex]);
 const handleClick = () => {
   pathIndex = (pathIndex + 1) % paths.length;
   changePath();

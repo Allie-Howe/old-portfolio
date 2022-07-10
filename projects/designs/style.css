@@ -10,7 +10,7 @@ body {
     align-items: center;
 }
 
-#gifArea {
+#gifArea>img {
     object-fit: cover;
     max-width: 100%;
     max-height: 100%;
