@@ -6,6 +6,7 @@ const paths = [
   `${PATH}/love.gif`,
   `${PATH}/snake.gif`,
   `${PATH}/triangles.gif`,
+  `${PATH}/Plus Squares.gif`,
   // `${PATH}/recursive_squares.mp4`,
 ]
 let pathIndex = 0;
