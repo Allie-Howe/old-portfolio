@@ -1,6 +1,5 @@
-import React from 'react';
 import {AppBar, Grid, Toolbar, Typography} from '@mui/material';
-import flLogo from  "../assets/fl_logo.svg";
+import flLogo from  "../../assets/fl_logo.svg";
 
 export const NavBar = () => (
   <AppBar>
