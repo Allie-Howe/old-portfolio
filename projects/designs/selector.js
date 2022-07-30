@@ -6,7 +6,7 @@ const paths = [
   `${PATH}/love.gif`,
   `${PATH}/snake.gif`,
   `${PATH}/triangles.gif`,
-  `${PATH}/Plus Squares.gif`,
+  `${PATH}/Plus_Squares.gif`,
 ]
 const images = paths.map((path) => {const img = new Image();img.src = path;return img})
 
