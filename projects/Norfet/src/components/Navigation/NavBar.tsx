@@ -1,4 +1,5 @@
 import {AppBar, Grid, Toolbar, Typography} from '@mui/material';
+import { Link } from 'react-router-dom';
 import flLogo from  "../../assets/fl_logo.svg";
 
 export const NavBar = () => (
@@ -6,16 +7,24 @@ export const NavBar = () => (
     <Toolbar>
       <Grid container gap={3}>
         <Grid item>
+          <Link to="/">
           <img src={flLogo} className="logo" alt="FetLife logo" />
+          </Link>
         </Grid>
         <Grid item>
-          <Typography>Home</Typography>
+          <Link to="/">
+            <Typography>Home</Typography>
+          </Link>
         </Grid>
         <Grid item>
-          <Typography>Groups</Typography>
+          <Link to="/groups">
+            <Typography>Groups</Typography>
+          </Link>
         </Grid>
         <Grid item>
-          <Typography>Events</Typography>
+          <Link to="/events">
+            <Typography>Events</Typography>
+          </Link>
         </Grid>
       </Grid>
     </Toolbar>
