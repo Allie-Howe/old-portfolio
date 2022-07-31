@@ -9,13 +9,13 @@ export const NavBar = () => (
           <img src={flLogo} className="logo" alt="FetLife logo" />
         </Grid>
         <Grid item>
-          <Typography>Thing 1</Typography>
+          <Typography>Home</Typography>
         </Grid>
         <Grid item>
-          <Typography>Thing 2</Typography>
+          <Typography>Groups</Typography>
         </Grid>
         <Grid item>
-          <Typography>Thing 3</Typography>
+          <Typography>Events</Typography>
         </Grid>
       </Grid>
     </Toolbar>
