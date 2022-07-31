@@ -1,4 +1,5 @@
 import { EventsPage } from './components/EventsPage';
+import { GroupsPage } from './components/GroupsPage';
 import { HomePage } from './components/HomePage';
 
 export const routes = [
@@ -11,5 +12,10 @@ export const routes = [
     path: "/events/",
     name: "Events",
     component: EventsPage
+  },
+  {
+    path: "/groups/",
+    name: "Groups",
+    component: GroupsPage
   },
 ]
