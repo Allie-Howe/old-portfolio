@@ -31,15 +31,12 @@ function mousePressed() {
   if (checkIfMatching(mousePos, rndTile)) {
     clickedCounts.correct++
     rndTile = getRndPos()
+    totalScore += 1
     cubeClicked = cubeCorrect
-  } else cubeClicked = cubeIncorrect
-  updateScore()
-}
-
-function updateScore() {
-  const accuracy = clickedCounts.total ? Math.round((clickedCounts.correct/clickedCounts.total)*100) : 0;
-
-  document.querySelector("#accuracy").innerHTML = accuracy;
+  } else {
+    cubeClicked = cubeIncorrect
+    totalScore -= 2
+  }
 }
 
 function mouseReleased() {
