@@ -27,6 +27,7 @@ function preload() {
   cubeCorrect = loadImage("./assets/cube_correct.png")
   cubeIncorrect = loadImage("./assets/cube_incorrect.png")
   cubeSelected = loadImage("./assets/cube_selected.png")
+  cubeClicked = cubeIncorrect;
 }
 
 function setup() {
@@ -66,7 +67,6 @@ function doTimeCalcs() {
   const mappedTime = map(timeRemaining, TIME_LIMIT, 0, 0, 1)
 
   const newBG = lerpColor(startCol, endCol, mappedTime)
-  console.log("timeRemaining", timeRemaining)
   background(newBG);
   document.querySelector("body").style.backgroundColor = newBG.toString();
 }
