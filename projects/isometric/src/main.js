@@ -59,7 +59,7 @@ function doTimeCalcs() {
   const startCol = color(0, 128, 0);
   const endCol = color(128, 0, 0);
   if (!timeGameStarted) return
-  timeRemaining = round(((TIME_LIMIT*1000) - (millis() - timeGameStarted) + (totalScore*1000)) / 10)/100;
+  timeRemaining = round(((TIME_LIMIT*1000) - (millis() - timeGameStarted) + (totalScore*1000)) / 100)/10;
   document.querySelector("#timer").innerHTML = timeRemaining
 
   if (timeRemaining <= 0) loseState();
