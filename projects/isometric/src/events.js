@@ -33,7 +33,8 @@ function mouseClicked(e) {
   updateMousePos(e.pageX, e.pageY)
   if (!timeGameStarted) {
     timeGameStarted = millis()
-    document.querySelector("#scoreArea").classList = "visible";
+    document.querySelector("#scoreArea").classList.add("visible");
+    document.querySelector("#info").classList.add("hidden");
   };
 
   clickedCounts.total++
