@@ -3,7 +3,7 @@ const w = h;
 const GRID_START = {i: -Math.floor(h/2), j: -Math.floor(w/2)}
 const IS_MOBILE = window.innerWidth < 600 ? true : false;
 const SCALE = IS_MOBILE ? 1.25/h : 4/h;
-let rndTile = getRndPos();
+let targetTile = getRndPos();
 
 let clickedCounts = {correct: null, total: null};
 const squareSize = Math.min(window.innerHeight, window.innerWidth)/10

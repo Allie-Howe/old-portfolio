@@ -21,7 +21,7 @@ function drawCube(i, j) {
   const cubePos = [-j, -i]
 
   if (checkIfMatching(cubePos, mousePos)) drawnCube = cubeSelected
-  if (checkIfMatching(cubePos, rndTile)) drawnCube = cubeTarget
+  if (checkIfMatching(cubePos, targetTile)) drawnCube = cubeTarget
 
   image(drawnCube, 0, 0);
 }
