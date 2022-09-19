@@ -10,6 +10,6 @@ function calculateDisplacement(i, j) {
 
 function applyDisplacement(i, j) {
 if (guiVars.hoverMode) {
-  if (-i === mousePos[1] && -j === mousePos[0]) translate(0, DISP_HEIGHT);
+  if (-i === mousePos[1] && -j === mousePos[0]) translate(0, cubeDisplacement);
 } else translate(0, calculateDisplacement(i, j));
 }

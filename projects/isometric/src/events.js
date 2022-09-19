@@ -1,5 +1,6 @@
 // Events
-let DISP_HEIGHT = -10
+const DISP_HEIGHT = {hover: -10, click: -5}
+let cubeDisplacement = DISP_HEIGHT.hover;
 let mousePos = [];
 function mouseMoved({ pageX, pageY }) {
   updateMousePos(pageX, pageY);
@@ -23,7 +24,7 @@ function getRndPos() {
 ].map(Math.round)}
 
 function mousePressed(e) {
-  DISP_HEIGHT = -5
+  cubeDisplacement = DISP_HEIGHT.click
   // Won't run unless on mobile/e is TouchEvent
   if (!e.touches) return;
   updateMousePos(e.touches[0].pageX, e.touches[0].pageY)
@@ -51,5 +52,5 @@ function mouseClicked(e) {
 }
 
 function mouseReleased() {
-  DISP_HEIGHT = -10
+  cubeDisplacement = DISP_HEIGHT.hover
 }
