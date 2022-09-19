@@ -1,5 +1,5 @@
 // Events
-const DISP_HEIGHT = {hover: -10, click: -5}
+const DISP_HEIGHT = {hover: -20, click: -10}
 let cubeDisplacement = DISP_HEIGHT.hover;
 let mousePos = [];
 function mouseMoved({ pageX, pageY }) {
@@ -44,9 +44,7 @@ function mouseClicked(e) {
     clickedCounts.correct++
     rndTile = getRndPos()
     totalScore += 1
-    cubeClicked = cubeCorrect
   } else {
-    cubeClicked = cubeIncorrect
     totalScore -= 2
   }
 }
