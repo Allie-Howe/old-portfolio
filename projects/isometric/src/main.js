@@ -12,11 +12,12 @@ let totalScore = 0;
 const TIME_LIMIT = 4;
 let cubeImg, cubeCorrect, cubeIncorrect, cubeTarget, cubeSelected, cubeClicked;
 
+const displacements = new Array(h).fill(0).map(() => new Array(h).fill(0));
 let gui, guiVars = {
   cubeSpacing: 0,
   amplitude: 50,
   speed: 2,
-  hoverMode: true
+  hoverMode: false
 }
 
 function preload() {
@@ -39,7 +40,6 @@ function draw() {
   scale(SCALE);
 
   doTimeCalcs();
-
   drawGrid();
 }
 
