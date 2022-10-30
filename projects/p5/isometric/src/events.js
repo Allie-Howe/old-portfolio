@@ -1,9 +1,12 @@
 // Events
 let DISP_HEIGHT = -10
 let mousePos = [];
-function mouseMoved() {
-  const XPos = (width/2 - mouseX) / SCALE;
-  const YPos = (height/2 - mouseY) / SCALE;
+function mouseMoved({ pageX, pageY }) {
+  updateMousePos(pageX, pageY);
+}
+function updateMousePos(rawX, rawY) {
+  const XPos = (width/2 - rawX) / SCALE;
+  const YPos = (height/2 - rawY) / SCALE;
   mousePos = getIsoFromGeo([XPos, YPos]).map(floor);
 }
 
@@ -19,27 +22,32 @@ function getRndPos() {
     rnd(GRID_START.j, -GRID_START.j)
 ].map(Math.round)}
 
-function mousePressed() {
+function mousePressed(e) {
+  DISP_HEIGHT = -5
+  // Won't run unless on mobile/e is TouchEvent
+  if (!e.touches) return;
+  updateMousePos(e.touches[0].pageX, e.touches[0].pageY)
+}
+
+function mouseClicked(e) {
+  updateMousePos(e.pageX, e.pageY)
   if (!timeGameStarted) {
     timeGameStarted = millis()
-    document.querySelector("#scoreArea").classList = "visible";
+    document.querySelector("#scoreArea").classList.add("visible");
+    document.querySelector("#info").classList.add("hidden");
   };
 
-  DISP_HEIGHT = -5
   clickedCounts.total++
 
   if (checkIfMatching(mousePos, rndTile)) {
     clickedCounts.correct++
     rndTile = getRndPos()
+    totalScore += 1
     cubeClicked = cubeCorrect
-  } else cubeClicked = cubeIncorrect
-  updateScore()
-}
-
-function updateScore() {
-  const accuracy = clickedCounts.total ? Math.round((clickedCounts.correct/clickedCounts.total)*100) : 0;
-
-  document.querySelector("#accuracy").innerHTML = accuracy;
+  } else {
+    cubeClicked = cubeIncorrect
+    totalScore -= 2
+  }
 }
 
 function mouseReleased() {
