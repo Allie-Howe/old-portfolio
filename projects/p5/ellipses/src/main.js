@@ -1,45 +1,56 @@
 const hueAmplitude = 10;
-let speed = 1e-3;
-let amplitude = 50;
 let circleSize = 5;
-let rangeX = 5
-let rangeY = 2
 let spacing = 1.4
+
+let gui, guiVars = {
+  amplitude: 20,
+  rangeX: 4,
+  rangeY: 4,
+  speed: 1e-3,
+  trail: false
+}
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   colorMode(HSB);
   noStroke();
+  gui = new dat.GUI()
+  gui.add(guiVars, 'amplitude', 0, 100)
+  gui.add(guiVars, 'rangeX', 0, 100)
+  gui.add(guiVars, 'rangeY', 0, 100)
+  gui.add(guiVars, 'speed', 0, 100)
+  gui.add(guiVars, 'trail', 0, 100)
+
 
   const isMobile = window.innerWidth < 576;
   if (isMobile) {
     const minSize = min(window.innerHeight, window.innerWidth)
-    amplitude = minSize / 20;
+    guiVars.amplitude = minSize / 20;
     circleSize = minSize / 150;
-    rangeX = 2;
-    rangeY = 4;
+    guiVars.rangeX = 2;
+    guiVars.rangeY = 4;
     spacing = 1.8
   }
 }
 
 function draw() {
-  background(0, 0, 0, 0.0075);
+  background(0, 0, 0, guiVars.trail ? 0.0075 : 1);
   translate(width/2, height/2);
 
-  for (let i = -rangeX; i <= rangeX; i++) {
-    for (let j = -rangeY; j <= rangeY; j++) {
+  for (let i = -guiVars.rangeX; i <= guiVars.rangeX; i++) {
+    for (let j = -guiVars.rangeY; j <= guiVars.rangeY; j++) {
       fill(calculateHue(i * j * 4), 255, 255);
       push();
-      translate((i * amplitude * 2 * spacing), (j * amplitude * 2 * spacing));
-      circle(getCircularPos(sin, j + rangeY), getCircularPos(cos, i + rangeX), circleSize)
+      translate((i * guiVars.amplitude * 2 * spacing), (j * guiVars.amplitude * 2 * spacing));
+      circle(getCircularPos(sin, j), getCircularPos(cos, i), circleSize)
       pop()
     }
   }
 }
 
-const getCircularPos = (fn, extra) => fn(millis() * speed * extra) * amplitude;
+const getCircularPos = (fn, extra) => fn(millis() * guiVars.speed * extra) * guiVars.amplitude;
 
 const calculateHue = (offset) => {
-  const time = millis() * speed * hueAmplitude + (offset ?? 0);
+  const time = millis() * guiVars.speed * hueAmplitude + (offset ?? 0);
   return time % 360;
 }
