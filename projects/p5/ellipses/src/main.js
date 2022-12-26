@@ -2,6 +2,7 @@ const hueAmplitude = 10;
 let circleSize = 5;
 let spacing = 1.4
 
+let guiClosed = false;
 let gui, guiVars = {
   amplitude: 20,
   rangeX: 4,
@@ -54,3 +55,15 @@ const calculateHue = (offset) => {
   const time = millis() * guiVars.speed * hueAmplitude + (offset ?? 0);
   return time % 360;
 }
+
+window.onload = (() => window.addEventListener('keypress', ({code}) => {
+  if (code === 'Space') {
+    if (guiClosed) {
+      gui.show();
+      guiClosed = false;
+    } else {
+      gui.hide();
+      guiClosed = true;
+    }
+  }
+}))
