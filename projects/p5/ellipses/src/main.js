@@ -56,14 +56,20 @@ const calculateHue = (offset) => {
   return time % 360;
 }
 
-window.onload = (() => window.addEventListener('keypress', ({code}) => {
-  if (code === 'Space') {
-    if (guiClosed) {
-      gui.show();
-      guiClosed = false;
-    } else {
-      gui.hide();
-      guiClosed = true;
+window.onload = (() => {
+  window.addEventListener('keypress', ({code}) => {
+    if (code === 'Space') {
+      document.querySelector('#info').classList.add('hidden')
+      if (guiClosed) {
+        gui.show();
+        guiClosed = false;
+      } else {
+        gui.hide();
+        guiClosed = true;
+      }
     }
-  }
-}))
+  });
+  window.addEventListener('click', () => {
+    document.querySelector('#info').classList.add('hidden')
+  });
+});
