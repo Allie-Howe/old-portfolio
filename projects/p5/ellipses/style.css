@@ -7,39 +7,27 @@ body {
 }
 
 .guiContainer {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.guiText {
   color: white;
   font-size: 3em;
   font-family: 'Comfortaa', cursive;
   text-align: center;
-}
 
-#scoreArea {
-  display: none;
-
-  position: absolute;
-  padding: .5em;
-  left: 0;
-  right: 0;
-}
-
-#scoreArea.visible {
-  display: unset;
-}
-
-#info {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 12em;
-  /* background-color: hsl(0, 0%, 10%, .5); */
   background-color: hsl(0, 0%, 0%, 0);
   color: rgba(0, 0, 0, 0);
   animation: fadeIn .5s linear .5s forwards;
   padding-bottom: 5px;
 }
 
-#info.hidden {
+.guiText.hidden {
   display: none;
 }
 
@@ -61,7 +49,7 @@ body {
 }
 
 @media only screen and (max-width: 960px) {
-  .guiContainer {
+  .guiText {
     font-size: 1.5em;
   }
 
