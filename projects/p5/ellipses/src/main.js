@@ -60,16 +60,23 @@ window.onload = (() => {
   window.addEventListener('keypress', ({code}) => {
     if (code === 'Space') {
       document.querySelector('#info').classList.add('hidden')
-      if (guiClosed) {
-        gui.show();
-        guiClosed = false;
-      } else {
-        gui.hide();
-        guiClosed = true;
-      }
+      toggleDatGui();
     }
   });
-  window.addEventListener('click', () => {
+  window.addEventListener('click', (e) => {
     document.querySelector('#info').classList.add('hidden')
+    if (e.pointerType && e.pointerType === 'touch' && !e.target.closest('.dg')) {
+      toggleDatGui();
+    }
   });
 });
+
+function toggleDatGui() {
+  if (guiClosed) {
+    gui.show();
+    guiClosed = false;
+  } else {
+    gui.hide();
+    guiClosed = true;
+  }
+}
