@@ -23,7 +23,6 @@ body {
 
 .guiText {
   color: white;
-  font-size: 3em;
   text-align: center;
 
   max-width: 12em;
@@ -31,6 +30,15 @@ body {
   animation: fadeIn .5s linear .25s forwards;
   /* background-color: hsl(0, 0%, 0%, 0.6); */
   padding-bottom: 5px;
+}
+
+p {
+  font-size: .7em;
+}
+
+h6 {
+  font-size: 2em;
+  margin: 0;
 }
 
 @keyframes fadeIn {
@@ -46,7 +54,11 @@ body {
 }
 
 @media only screen and (max-width: 960px) {
-  .guiText {
+  h6 {
     font-size: 1.5em;
+  }
+
+  p {
+    font-size: .7em;
   }
 }
