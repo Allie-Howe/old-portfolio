@@ -14,12 +14,13 @@ function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   colorMode(HSB);
   noStroke();
-  gui = new dat.GUI()
-  gui.add(guiVars, 'amplitude', 10, 30)
-  gui.add(guiVars, 'rangeX', 0, 30)
-  gui.add(guiVars, 'rangeY', 0, 12)
-  gui.add(guiVars, 'speed', 0, 0.005)
-  gui.add(guiVars, 'trail')
+  gui = new dat.GUI();
+  gui.add(guiVars, 'amplitude', 10, 30);
+  gui.add(guiVars, 'rangeX', 0, 30);
+  gui.add(guiVars, 'rangeY', 0, 12);
+  gui.add(guiVars, 'speed', 0, 0.005);
+  gui.add(guiVars, 'trail');
+
 
 
   const isMobile = window.innerWidth < 576;
@@ -28,7 +29,12 @@ function setup() {
     guiVars.amplitude = minSize / 20;
     guiVars.rangeX = 2;
     guiVars.rangeY = 4;
-    spacing = 1.8
+    spacing = 1.8;
+
+    const toggleMsg = document.querySelector('#toggleMsg');
+    const closeMsg = document.querySelector('#closeMsg');
+    toggleMsg.innerHTML = 'tap'
+    closeMsg.innerHTML = 'tap'
   }
 }
 
