@@ -1,5 +1,4 @@
 const hueAmplitude = 10;
-let circleSize = 5;
 let spacing = 1.4
 
 let guiClosed = false;
@@ -16,18 +15,17 @@ function setup() {
   colorMode(HSB);
   noStroke();
   gui = new dat.GUI()
-  gui.add(guiVars, 'amplitude', 0, 100)
-  gui.add(guiVars, 'rangeX', 0, 100)
-  gui.add(guiVars, 'rangeY', 0, 100)
-  gui.add(guiVars, 'speed', 0, 100)
-  gui.add(guiVars, 'trail', 0, 100)
+  gui.add(guiVars, 'amplitude', 10, 30)
+  gui.add(guiVars, 'rangeX', 0, 30)
+  gui.add(guiVars, 'rangeY', 0, 12)
+  gui.add(guiVars, 'speed', 0, 0.005)
+  gui.add(guiVars, 'trail')
 
 
   const isMobile = window.innerWidth < 576;
   if (isMobile) {
     const minSize = min(window.innerHeight, window.innerWidth)
     guiVars.amplitude = minSize / 20;
-    circleSize = minSize / 150;
     guiVars.rangeX = 2;
     guiVars.rangeY = 4;
     spacing = 1.8
@@ -35,6 +33,7 @@ function setup() {
 }
 
 function draw() {
+  const circleSize = guiVars.amplitude/8
   background(0, 0, 0, guiVars.trail ? 0.0075 : 1);
   translate(width/2, height/2);
 
