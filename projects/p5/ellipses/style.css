@@ -9,10 +9,16 @@ body {
 
 .guiContainer {
   display: flex;
-  height: 100vh;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  background-color: hsl(0, 0%, 0%, 0.1);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .guiText {
@@ -20,24 +26,15 @@ body {
   font-size: 3em;
   text-align: center;
 
-  width: 12em;
-  background-color: hsl(0, 0%, 0%, 0);
+  max-width: 12em;
   color: rgba(0, 0, 0, 0);
-  animation: fadeIn .5s linear .5s forwards;
+  animation: fadeIn .5s linear .25s forwards;
+  /* background-color: hsl(0, 0%, 0%, 0.6); */
   padding-bottom: 5px;
-}
-
-.hidden {
-  display: none;
 }
 
 @keyframes fadeIn {
   0% {
-    background-color: hsl(0, 0%, 0%, 0);
-    color: rgba(255, 255, 255, 0);
-  }
-
-  20% {
     background-color: hsl(0, 0%, 0%, 0);
     color: rgba(255, 255, 255, 0);
   }
@@ -52,5 +49,4 @@ body {
   .guiText {
     font-size: 1.5em;
   }
-
 }

@@ -58,12 +58,12 @@ const calculateHue = (offset) => {
 window.onload = (() => {
   window.addEventListener('keypress', ({code}) => {
     if (code === 'Space') {
-      document.querySelector('#info').classList.add('hidden')
+      removeOverlay();
       toggleDatGui();
     }
   });
   window.addEventListener('click', (e) => {
-    document.querySelector('#info').classList.add('hidden')
+    removeOverlay();
     if (e.pointerType && e.pointerType === 'touch' && !e.target.closest('.dg')) {
       toggleDatGui();
     }
@@ -78,4 +78,8 @@ function toggleDatGui() {
     gui.hide();
     guiClosed = true;
   }
+}
+
+function removeOverlay() {
+  document.querySelector('#info')?.remove();
 }
