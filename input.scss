@@ -140,8 +140,8 @@ nav {
 }
 
 /* == CONTENT == */
-.textbox {
-  margin: 70px 15% 0 15%;
+.container {
+  // margin-bottom: 70px;
   color: #ccc;
   overflow: auto;
   --link-clr: #faa;
@@ -163,6 +163,7 @@ nav {
     display: block;
     padding-left: 20px;
     float: right;
+    text-align: center;
 
     max-height: 400px;
 
@@ -287,18 +288,6 @@ a.anchor {
     max-width: 50px;
   }
 
-  #about {
-    #selfie {
-      float: none;
-      transform: translateX(0);
-      margin: auto;
-    }
-
-    p {
-      text-align: center;
-    }
-  }
-
   .welcome {
     font-size: 125px;
   }
@@ -322,7 +311,11 @@ a.anchor {
 
   #selfie {
     height: 250px;
-    animation: none;
+    padding-left: 0 !important;
+    float: none !important;
+    transform: translateX(0) !important;
+    margin: auto;
+
   }
 
   .navbar-collapse.show {

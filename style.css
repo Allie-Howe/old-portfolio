@@ -117,31 +117,31 @@ nav.scrolled a {
 }
 
 /* == CONTENT == */
-.textbox {
-  margin: 70px 15% 0 15%;
+.container {
   color: #ccc;
   overflow: auto;
   --link-clr: #faa;
 }
-.textbox h2 {
+.container h2 {
   text-align: center;
   font-size: 50px;
   font-weight: 300;
 }
-.textbox p {
+.container p {
   font-family: "Roboto Slab";
   font-size: 24px;
   font-weight: 300;
 }
-.textbox #selfie {
+.container #selfie {
   display: block;
   padding-left: 20px;
   float: right;
+  text-align: center;
   max-height: 400px;
   opacity: 0;
   transition: transform 1s, opacity 1.5s;
 }
-.textbox #selfie.in-view {
+.container #selfie.in-view {
   opacity: 1;
   transform: translateX(-10px);
 }
@@ -242,14 +242,6 @@ a.anchor {
   .brand {
     max-width: 50px;
   }
-  #about #selfie {
-    float: none;
-    transform: translateX(0);
-    margin: auto;
-  }
-  #about p {
-    text-align: center;
-  }
   .welcome {
     font-size: 125px;
   }
@@ -268,7 +260,10 @@ a.anchor {
   }
   #selfie {
     height: 250px;
-    animation: none;
+    padding-left: 0 !important;
+    float: none !important;
+    transform: translateX(0) !important;
+    margin: auto;
   }
   .navbar-collapse.show {
     background-color: rgba(255, 255, 255, 0.5333333333) !important;
