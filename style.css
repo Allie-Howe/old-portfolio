@@ -21,6 +21,7 @@
 
 body {
   margin: 0;
+  padding-bottom: 2em;
   color: white;
   background-color: #111 !important;
   font-family: "Montserrat";
@@ -166,6 +167,11 @@ nav.scrolled a {
 .card:hover .card-img-top,
 .card:focus .card-img-top {
   transform: scale(1.3);
+}
+
+p.archive-note {
+  text-align: right;
+  font-size: 1.2em;
 }
 
 /* == FOOTER == */
