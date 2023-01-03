@@ -21,8 +21,6 @@ function setup() {
   gui.add(guiVars, 'speed', 0, 0.005);
   gui.add(guiVars, 'trail');
 
-
-
   const isMobile = window.innerWidth < 576;
   if (isMobile) {
     const minSize = min(window.innerHeight, window.innerWidth)
