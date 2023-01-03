@@ -153,6 +153,18 @@ nav.scrolled a {
   --link-clr: white;
   color: #666;
   overflow: hidden;
+  background-color: rgba(248, 248, 255, 0.9333333333);
+  position: relative;
+  border-top-left-radius: 5% !important;
+  border-top-right-radius: 5% !important;
+  border-bottom-left-radius: 5% !important;
+  border-bottom-right-radius: 5% !important;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1333333333);
+  transition: background-color 0.25s;
+}
+.card .card-text {
+  font-size: 1.2em;
+  font-weight: 300;
 }
 .card .btn {
   margin: 10px;
@@ -162,11 +174,17 @@ nav.scrolled a {
   aspect-ratio: 16/9;
   transition: transform 0.5s;
   transform-origin: top;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
 }
 
+.card:hover,
+.card:focus {
+  background-color: rgba(248, 248, 255, 0.8666666667);
+}
 .card:hover .card-img-top,
 .card:focus .card-img-top {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 p.archive-note {
