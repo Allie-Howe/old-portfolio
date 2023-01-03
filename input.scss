@@ -189,6 +189,7 @@ nav {
   }
 
   .card-img-top {
+    aspect-ratio: 16 / 9;
     transition: transform 0.5s;
     transform-origin: top;
   }

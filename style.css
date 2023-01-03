@@ -158,6 +158,7 @@ nav.scrolled a {
   border: 0 !important;
 }
 .card .card-img-top {
+  aspect-ratio: 16/9;
   transition: transform 0.5s;
   transform-origin: top;
 }
