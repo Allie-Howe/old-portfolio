@@ -272,5 +272,9 @@ a.anchor {
     background-color: rgba(0, 0, 0, 0.6666666667) !important;
   }
 }
+/* BOOTSTRAP OVERRIDES */
+.d-flex.flex-column {
+  gap: 2em;
+}
 
 /*# sourceMappingURL=style.css.map */

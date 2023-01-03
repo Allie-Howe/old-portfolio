@@ -328,3 +328,8 @@ a.anchor {
     }
   }
 }
+
+/* BOOTSTRAP OVERRIDES */
+.d-flex.flex-column {
+  gap: 2em;
+}
