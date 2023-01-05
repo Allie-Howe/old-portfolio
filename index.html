@@ -14,10 +14,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  <link fancy-link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="style.css">
+  <link fancy-link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
 </head>
 
@@ -34,10 +34,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#info">info</a>
+          <a class="nav-link fancy-link" href="#info">info</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#portfolio">portfolio</a>
+          <a class="nav-link fancy-link" href="#skills">skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fancy-link" href="#portfolio">portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fancy-link" href="#portfolio">resume</a>
         </li>
       </ul>
     </div>
@@ -56,7 +62,7 @@
       <a class="icon" target="_blank" rel="noopener noreferrer" href="https://www.github.com/Allie-Howe">
         <img alt="Github Icon" src="assets/svg/gh.svg" />
       </a>
-      <a class="icon" target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/Allie-Howe">
+      <a class="icon" target="_blank" rel="noopener noreferrer" href="https://link fancy-linkedin.com/in/Allie-Howe">
         <img src="assets/svg/li.svg" />
       </a>
     </div>
@@ -70,14 +76,94 @@
       <p>
         I'm Allie Howe, a Computer Science BSc (Hons) graduate from the University of Lincoln, currently working for
         music
-        tech startup <a class="link" href="http://clicknclear.com">ClicknClear</a> as a Graduate Software Engineer.
+        tech startup <a class="link fancy-link" href="http://clicknclear.com">ClicknClear</a> as a Graduate Software
+        Engineer.
       </p>
       <p>
         Besides this, I enjoy playing around with various technologies - from creative code using p5.js, to learning new
         frameworks such as Svelte, to improving my knowledge of React and more.
       </p>
-      <p>You can see all of my open source projects, including this site itself, <a class="link" target="_blank"
-          rel="noopener noreferrer" href="https://github.com/allie-howe">here</a>.</p>
+      <p>You can see all of my open source projects, including this site itself, <a class="link fancy-link"
+          target="_blank" rel="noopener noreferrer" href="https://github.com/allie-howe">here</a>.</p>
+    </section>
+
+    <section class="container">
+      <a class="anchor" id="skills"></a>
+      <h2>what can i do?</h2>
+      <p>
+        Here you'll find just some of the skills I've picked up throughout my
+        career & personal life.
+      </p>
+      <div>
+        <div class="tabs">
+          <a class="link category active" data-target="#languages">Languages, Libraries and Frameworks</a>
+          <a class="link category" data-target="#software">Software Packages</a>
+          <a class="link category" data-target="#softskills">Soft Skills</a>
+          <a class="link category" data-target="#other">Other</a>
+        </div>
+        <div class="skill-page active" id="languages">
+          <div class="row">
+            <ul class="col">
+              <li><b>Languages (web)</b></li>
+              <li>JavaScript (inc. ES6)</li>
+              <li>HTML5 & CSS3</li>
+              <li>Bootstrap</li>
+              <li>Sass (SCSS)</li>
+            </ul>
+            <ul class="col">
+              <li><b>Languages (other)</b></li>
+              <li>C#</li>
+              <li>Python</li>
+              <li>C++</li>
+              <li>OpenCL</li>
+            </ul>
+            <ul class="col">
+              <li><strong>Libraries</strong></li>
+              <li>Processing & p5js</li>
+              <li>Three.js</li>
+              <li>RESTful APIs</li>
+            </ul>
+            <ul class="col">
+              <li><strong>Frameworks</strong></li>
+              <li>React (JS & Native)</li>
+              <li>ASP.NET</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill-page" id="software">
+          <div class="row">
+            <ul class="col">
+              <li>Anaconda</li>
+              <li>Git & Github</li>
+              <li>Node.JS</li>
+            </ul>
+            <ul class="col">
+              <li>Visual Studio Code</li>
+              <li>Visual Studio 2019</li>
+            </ul>
+            <ul class="col">
+              <li>SQL Server</li>
+              <li>Unity</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill-page" id="softskills">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="skill-page" id="other">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="container">
@@ -228,7 +314,8 @@
           <a href="projects/archive/whyl/" class="btn btn-dark">visit</a>
         </div>
       </section>
-      <p class="archive-note">p.s. there's more in the <a href="./archive.html" class="link archive-link">archive ></a>
+      <p class="archive-note">p.s. there's more in the <a href="./archive.html"
+          class="link fancy-link archive-link fancy-link">archive ></a>
       </p>
     </section>
   </div>

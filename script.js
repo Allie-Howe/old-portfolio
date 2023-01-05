@@ -33,6 +33,11 @@ window.onload = () => {
 
   headingObs.observe(header);
   topObs.observe(top);
+
+  const cats = document.querySelectorAll(".category");
+  cats.forEach((cat) => {
+    cat.addEventListener("click", tabClicked);
+  });
 };
 
 function scrollEventListener() {
@@ -43,4 +48,20 @@ function scrollEventListener() {
       500
     );
   });
+}
+
+function tabClicked(e) {
+  const activeTab = document.querySelector(".category.active"),
+    clickedTab = e.srcElement;
+
+  if (activeTab == clickedTab || !clickedTab) return;
+
+  clickedTab.classList.add("active");
+  activeTab.classList.remove("active");
+
+  const activePage = document.querySelector(activeTab.dataset.target),
+    clickedPage = document.querySelector(clickedTab.dataset.target);
+
+  clickedPage.classList.add("active");
+  activePage.classList.remove("active");
 }
