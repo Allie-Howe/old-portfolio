@@ -305,8 +305,14 @@ a.anchor {
 /* ==PSEUDOCLASSES== */
 .nav-link,
 .link {
-  color: var(--link-clr);
+  color: var(--link-clr) !important;
   text-decoration: none !important;
+  transition: opacity .3s;
+  opacity: 0.85;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .fancy-link {
